@@ -365,6 +365,7 @@ section.notice{margin-bottom:40px !important;}
     color:white;
     padding:20px 24px;
     margin-bottom:10px;
+    border:1px solid #b987bb;
     border-radius:10px;
     cursor:pointer;
 }
@@ -504,7 +505,7 @@ button, .banner-inner{cursor:pointer;}
 #book_frame{width:100%;}
 .visual{overflow: hidden;}
 .box-btns{margin-right:10%;}
-.sale-event{width:50%;}
+.sale-event{width:42%;}
 @media screen and (min-width:1025px){
     header{
         display: block;
@@ -871,6 +872,7 @@ button, .banner-inner{cursor:pointer;}
     .banner-slides {
         height: 100%;
     }
+    .giftbox{width:80%;}
 }
 /*footer style*/
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}
