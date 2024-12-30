@@ -144,8 +144,7 @@
                 </li>
                 <li>
                     <a href="#" class="bold open-services">
-                        커뮤니티
-                        <span class="sub_menu_toggle_btn"></span>
+                        커뮤니티<span class="sub_menu_toggle_btn"></span>
                     </a>
                     <ul class="service-list">
                         <li><a href="#">공지사항</a></li>
@@ -158,30 +157,26 @@
     </header>
 
     <!--header end-->
-
-    <section class="banner">
-        <div id="book_frame" title="배너">
-            <div id="book_content1" class="bookcon">
-                <h2></h2>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="images/banner.png" alt="초보가 고수되기1  안드로이드로 용돈벌기">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="images/banner.png" alt="초보가 고수되기1  안드로이드로 용돈벌기">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="images/banner.png" alt="초보가 고수되기1  안드로이드로 용돈벌기">
-                      </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                  </div>
+    
+    <div class="banner">
+        <div class="banner-bg"></div>
+        <div class="banner-slides">
+            <div class="slide active">
+                <img src="images/eventPhoto1.png" alt="이벤트 1">
             </div>
+            <div class="slide">
+                <img src="images/eventPhoto2.png" alt="이벤트 2">
+            </div>
+            <div class="slide">
+                <img src="images/eventPhoto3.png" alt="이벤트 3">
+            </div>
+            <div class="banner-controls">
+                <button class="prev"><img src="images/prev_btn_white.svg"></button>
+                <span class="slide-number">1 / 3</span>
+                <button class="next"><img src="images/next_btn_white.svg"></button>
+              </div>
         </div>
-    </section>
+      </div>
 
     <section class="notice">
         <div class="notice_container row">
@@ -522,7 +517,7 @@
     </section>
 
     <section class="free-pdf row banner2" style="height: 500px; background:none; border:none;">
-        <div class="subtitle">수강생 전원에게</div>
+        <div class="subtitle">입문 강의 수강생 전원에게</div>
         <h2>강의 자료집 <span style="color:#b987bb;">무료 증정</span></h2>
         <div class="pdf-banner" style="height: 200px;">
             <img src ="images/book07.png" style="width:30%;">
@@ -536,30 +531,35 @@
             <h2>연말 할인 이벤트</h2>
             <span class="event-description">인기상품 10% 할인</span>
         </div>
+        <img src="images/GiftBox.png" class="giftbox">
     </section>
 
     <section class="event-banner2 row">
         <div class="banner-description">
             <h2>감귤코딩님 강의 패키지</h2>
-            <span>50% 할인</span>
+            <span class="event-description">50% 할인</span>
         </div>
+        <img src="images/saleEvent2.png" class="sale-event">
     </section>
 
     <section class="questions row">
         <h2>자주 묻는 질문</h2>
-        <div class="question-box Q1">
-            <p class="question-question"><span class="colored">Q</span>강의에서 자막을 제공하고 있나요?</p>
+        <div class="question-box">
+            <p class="question-question"><span class="colored">Q</span>강의에서 자막을 제공하고 있나요?<img src="images/down_btn.svg" alt="arrow" class="arrow-icon"></p>
             <p class="question-answer A1 hidden">네, 모든 강의에서 자막을 제공하고 있습니다.</p>
         </div>
-        <div class="question-box Q2">
-            <p class="question-question"><span class="colored">Q</span>강의 시청 시 키보드로 영상 재생을 컨트롤할 수 있나요?</p>
-            <p class="question-answer A2 hidden">네, 방향키와 스페이스바, M키, Z키와 X키를 이용하여 컨트롤 할 수 있습니다.
-                좌우측 키를 이용하여 영상을 10초 이전이나 10초 이후로 넘길 수 있으며, 상하 방향키를 이용하여 볼륨을 조절할 수 있으며, M키를 누르면 음소거가 됩니다. Z를 누르면 영상 속도가 느려지고 X키를 누르면 영상 속도가 빨라집니다.
+        <div class="question-box">
+            <p class="question-question"><span class="colored">Q</span>강의 시청 시 키보드로 영상 재생을 컨트롤할 수 있나요?<img src="images/down_btn.svg" alt="arrow" class="arrow-icon"></p>
+            <p class="question-answer A2 hidden">네, 스페이스바와 방향키, M키, Z키와 X키를 이용하여 컨트롤 할 수 있습니다.<br><br>
+                스페이스바를 누르면 영상이 일시정지 합니다. 한 번 더 누르면 다시 재생됩니다.<br><br>좌우측 키를 이용하여 영상을 10초 이전이나 10초 이후로 넘길 수 있으며, 상하 방향키를 이용하여 볼륨을 조절할 수 있습니다.<br><br>M키를 눌러 음소거를 하거나 음소거를 해제할 수 있습니다.<br><br>Z를 누르면 영상 속도가 느려지고 X키를 누르면 영상 속도가 빨라집니다.
             </p>
         </div>
-        <div class="question-box Q3">
-            <p class="question-question"><span class="colored">Q</span>해외에서도 서비스를 이용할 수 있나요?</p>
+        <div class="question-box">
+            <p class="question-question"><span class="colored">Q</span>해외에서도 서비스를 이용할 수 있나요?<img src="images/down_btn.svg" alt="arrow" class="arrow-icon"></p>
             <p class="question-answer A3 hidden">네, 인터넷만 사용할 수 있다면 지역에 상관없이 서비스를 사용할 수 있습니다.</p>
+        </div>
+        <div class="additional-box">
+            <p class="question-question">질문 더보기</p>
         </div>
     </section>
 
@@ -583,25 +583,8 @@
             ©CATCHCODEKR. ALL RIGHTS RESERVED</p>
     </footer>
     <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-    <script>
-    var swiper = new Swiper(".mySwiper", {
-         slidesPerView: "auto",
-         centeredSlides: true,
-         spaceBetween: 30,
-         loop: true,
-         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script> 
+
 </body>
 </html>
