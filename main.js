@@ -1,4 +1,3 @@
-// 모든 메뉴 항목 선택
 const menuItems = document.querySelectorAll('.nav.mobile>ul.gnb_nav>li>a');
 
 // 각 메뉴 항목에 클릭 이벤트 추가
@@ -6,33 +5,21 @@ menuItems.forEach((menuItem) => {
   const toggleBtn = menuItem.querySelector('.sub_menu_toggle_btn');
 
   if (toggleBtn) {
-    // 상위 메뉴 클릭 시 동작
     menuItem.addEventListener('click', (e) => {
-      // 이미 활성화된 항목 비활성화
-      const activeItem = document.querySelector('.nav.mobile li a.active');
-      if (activeItem && activeItem !== menuItem) {
-        activeItem.classList.remove('active');
-      }
-
-      // 현재 항목 활성화/비활성화
+      // 현재 메뉴의 활성화 상태를 토글
       menuItem.classList.toggle('active');
     });
   }
 
-  // 서브메뉴의 li 클릭 시 이벤트 방지
+  // 서브메뉴의 li 클릭 시 이벤트 전파 방지
   const subMenuItems = menuItem.querySelectorAll('.course-list li, .service-list li');
   subMenuItems.forEach((subMenuItem) => {
     subMenuItem.addEventListener('click', (e) => {
-      e.stopPropagation(); // 이벤트 중지
+      e.stopPropagation(); // 이벤트 전파 중지
     });
   });
 });
 
-const btnMenuMobile = document.querySelector('.btn_menu_mobile');
-
-btnMenuMobile.addEventListener('click', () => {
-  btnMenuMobile.classList.toggle('active');
-});
 
 const btnSearchMobile = document.querySelector('.btn_search_mobile');
 const btnSearchHidden = document.querySelector('.btn_search_hidden');
@@ -49,23 +36,71 @@ btnSearchMobile.addEventListener('click', () => {
   headerInner.classList.toggle('active');
 });
 
-const btnQuestionBox = document.querySelector('.question-box');
-const btnAnswer = document.querySelector('.question-answer');
-const Question1 = document.querySelector('.Q1');
-const Question2 = document.querySelector('.Q2');
-const Question3 = document.querySelector('.Q3');
-const Answer1 = document.querySelector('.A1');
-const Answer2 = document.querySelector('.A2');
-const Answer3 = document.querySelector('.A3');
-btnQuestionBox.addEventListener('click', () => {
-    btnQuestionBox.classList.toggle('active');
-    btnAnswer.classList.toggle('active');
+document.querySelectorAll('.question-box').forEach(box => {
+    box.addEventListener('click', () => {
+    // 이미지 회전
+    const arrow = box.querySelector('.arrow-icon');
+    if (arrow) {
+        arrow.classList.toggle('rotated');
+    }
+
+    // 답변 표시/숨기기
+    const answer = box.querySelector('.question-answer');
+    if (answer) {
+        answer.classList.toggle('active');
+        answer.classList.toggle('hidden');
+    }
+});
 });
 
-Question2.addEventListener('click', () => {
-    Answer2.classList.toggle('active');
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+       nextEl: ".swiper-button-next",
+       prevEl: ".swiper-button-prev",
+     },
+   pagination: {
+   el: ".swiper-pagination",
+   clickable: true,
+ },
 });
 
-Question3.addEventListener('click', () => {
-    Answer3.classList.toggle('active');
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const slideNumber = document.querySelector('.slide-number');
+const bannerBg = document.querySelector('.banner-bg');
+
+let currentIndex = 0;
+
+// 슬라이드
+function updateSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+        slide.classList.add('active');
+        }
+    });
+
+// 배경 색 변경
+if (index === 1) {bannerBg.style.backgroundColor = '#0b0f14';} // 2번 슬라이드
+else if (index === 2) {bannerBg.style.backgroundColor = '#001658';} // 3번 슬라이드
+else {bannerBg.style.backgroundColor = '#004ddb';} // 기본 색상 (1번 슬라이드)
+
+slideNumber.textContent = `${index + 1} / ${slides.length}`;}
+
+//버튼 숫자 변경
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide(currentIndex);
 });
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide(currentIndex);
+});
+
+updateSlide(currentIndex);
