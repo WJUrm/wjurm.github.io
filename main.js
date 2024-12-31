@@ -36,21 +36,60 @@ btnSearchMobile.addEventListener('click', () => {
   headerInner.classList.toggle('active');
 });
 
+
+//banner
+const slides = document.querySelectorAll('.slide');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const slideNumber = document.querySelector('.slide-number');
+const bannerBg = document.querySelector('.banner-bg');
+
+let currentIndex = 0;
+
+function updateSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+        slide.classList.add('active');
+        }
+    });
+
+// 배경 색 변경
+if (index === 1) {bannerBg.style.backgroundColor = '#0b0f14';}
+else if (index === 2) {bannerBg.style.backgroundColor = '#001658';}
+else {bannerBg.style.backgroundColor = '#004ddb';}
+
+slideNumber.textContent = `${index + 1} / ${slides.length}`;}
+
+//버튼 숫자 변경
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlide(currentIndex);
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlide(currentIndex);
+});
+
+updateSlide(currentIndex);
+
+//FAQ
 document.querySelectorAll('.question-box').forEach(box => {
     box.addEventListener('click', () => {
-    // 이미지 회전
-    const arrow = box.querySelector('.arrow-icon');
-    if (arrow) {
-        arrow.classList.toggle('rotated');
-    }
+      // 이미지 회전
+      const arrow = box.querySelector('.arrow-icon');
+      if (arrow) {
+          arrow.classList.toggle('rotated');
+      }
 
-    // 답변 표시/숨기기
-    const answer = box.querySelector('.question-answer');
-    if (answer) {
-        answer.classList.toggle('active');
-        answer.classList.toggle('hidden');
-    }
-});
+      // 답변 표시/숨기기
+      const answer = box.querySelector('.question-answer');
+      if (answer) {
+          answer.classList.toggle('active');
+          answer.classList.toggle('hidden');
+      }
+    });
 });
 
 var swiper = new Swiper(".mySwiper", {
@@ -67,40 +106,3 @@ var swiper = new Swiper(".mySwiper", {
    clickable: true,
  },
 });
-
-const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const slideNumber = document.querySelector('.slide-number');
-const bannerBg = document.querySelector('.banner-bg');
-
-let currentIndex = 0;
-
-// 슬라이드
-function updateSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-        slide.classList.add('active');
-        }
-    });
-
-// 배경 색 변경
-if (index === 1) {bannerBg.style.backgroundColor = '#0b0f14';} // 2번 슬라이드
-else if (index === 2) {bannerBg.style.backgroundColor = '#001658';} // 3번 슬라이드
-else {bannerBg.style.backgroundColor = '#004ddb';} // 기본 색상 (1번 슬라이드)
-
-slideNumber.textContent = `${index + 1} / ${slides.length}`;}
-
-//버튼 숫자 변경
-prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlide(currentIndex);
-});
-
-nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlide(currentIndex);
-});
-
-updateSlide(currentIndex);
