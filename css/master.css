@@ -52,6 +52,17 @@ h1 img{height:60px;}
 .free-pdf{
     text-align:center; 
     background:#eee !important;
+    height: 500px;
+    overflow: hidden;
+}
+.free-pdf-description{padding:30px 0;}
+.pdf-banner{
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    height: 600px;
+    margin: 0 auto;
+    justify-content: space-around;
 }
 .course-card{display:flex;cursor:pointer;}
 .course-card img {padding:10px;}
@@ -193,11 +204,9 @@ h1 img{height:60px;}
     flex-direction: column;
     justify-content: center;
 }
-.popular-topics, .popular-courses, .reviews, .free-courses, .banner2 {
+.popular-topics, .popular-courses, .reviews, .free-courses, .free-pdf {
     padding: 20px;
     background: #fff;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
 }
 h2 {
     margin-bottom: 20px;
@@ -431,7 +440,7 @@ section.notice{margin-bottom:40px !important;}
     background:url('../images/bannerlong01.png')no-repeat 0 100%;
     background-size:cover;
 }
-.event-banner, .event-banner2{
+.event-banner, .event-banner2>.row{
     display:flex;
     height:500px;
     flex-direction: column;
@@ -498,9 +507,9 @@ button, .banner-inner{cursor:pointer;}
     display: inline-block;
     width: 20px;
     height: 20px;
-    background:url('../images/down_btn.svg')no-repeat 0 0;
+    background:url('../images/up_btn.svg')no-repeat 0 0;
     transition: transform 0.3s ease;
-    }
+}
 .giftbox{width:50%;}
 #book_frame{width:100%;}
 .visual{overflow: hidden;}
@@ -583,6 +592,7 @@ button, .banner-inner{cursor:pointer;}
         border-bottom:1px solid #eee;
     }
     header form{display:inline-block;}
+    .header-gap{display:flex;gap:1px;}
     .profile-img{float:right;width: 45px; height:45px !important; border-radius:50px;cursor:pointer;}
     .nav ul li{float:left; line-height:80px; margin-left:80px;}
     .nav ul li a{font-size:15px;font-weight:bold;}
@@ -601,7 +611,6 @@ button, .banner-inner{cursor:pointer;}
         align-items: center;
     }
     .gnb{height:45px;background:#ccc;}
-    .header-gap{display:flex;gap:1px;}
     .gnb>.header-gap>li{
         float:left;
         text-align:center;
@@ -660,7 +669,6 @@ button, .banner-inner{cursor:pointer;}
 }
 @media screen and (max-width:767px){
     .PC, .Tablet{display:none !important;}
-    .course-list, .service-list{display:none;}
     header{
         display: block;
         width:100%;
@@ -672,14 +680,20 @@ button, .banner-inner{cursor:pointer;}
         border-bottom:1px solid #eee;
         padding:0 10px;
     }
-    .container{
-        max-width: 1200px;
-        margin:0 auto;
-        position:relative;
-        align-items: center;
-        height:60px;
-        flex-wrap:wrap;
+    .header-btn{
+        display:flex;
+        justify-content: space-evenly;
+        padding:20px 0;
     }
+    .header-btn a{
+        display:inline-block;
+        width:160px;
+        padding:8px 0;
+        text-align:center;
+        border:1px solid #ccc;
+        border-radius:50px;
+    }
+    .header-btn a:hover{background:#eee;}
     h1 a{height:60px;}
     .gnb{
         display:flex;
@@ -692,48 +706,42 @@ button, .banner-inner{cursor:pointer;}
         border:none;
         height:30px;
     }
-    .gnb>li{
-        float:left;
-        text-align:center;
-        min-width:7.64em;
-        width:18em;
-        height:45px;
-        line-height:45px;
+    .gnb_nav{display:none;}
+    .btn_menu_mobile{
+        width:30px;
+        height:30px;
+        background:url('../images/hamburger.svg')no-repeat 0 0 !important;
     }
-    .gnb>li>a{
-        display:block;
-        border:1px solid #ccc;
-        border-left:none;
+    .btn_menu_mobile, .btn_search_mobile{cursor:pointer;}
+
+    /*접이식*/
+    .gnb_nav li ul li a{
+        background:url('../images/next_btn.svg')no-repeat right;
+        background-size:15px;
     }
-    .gnb>li:first-child>a{
-        display:block;
-        border-left:1px solid #ccc;
-    }
-    .gnb>li:hover a~.lists{
-        display:block;
-    }
-    .lists{
-        display:none;
-        background:white;
-        border:1px solid black; 
-        border-radius:0 0 5px 5px;
-        border-top:none;
-    }
-    .gnb>li>a, .lists li:hover>a{
+    .gnb_nav li ul li:hover a{
         font-weight:bold;
+        background:#eee url('../images/next_btn.svg')no-repeat right;
+        background-size:15px;
     }
-    .container>.gnb>li>ul>li{
-        height:40px;
-        line-height:40px;
+    .gnb_nav>li>a{position:relative;}
+    .open-courses, .open-services{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    .container form{position:relative;text-align:center;line-height:60px;}
+    .nav.mobile li a.active .sub_menu_toggle_btn {
+        transform: rotate(180deg);
+    }
+    .nav ul li a{height:50px;line-height:50px;font-size:15px;}
+    .bold{font-size:16px !important;font-weight:bold;border-bottom:1px solid #ccc;}
+
     .banner{
         min-height: 250px;
         background:#004ddb;
         margin-top:60px !important;
         height:300px !important;
     }
-
     .search-section h2 {
         padding: 0 3% !important;
     }
@@ -742,6 +750,7 @@ button, .banner-inner{cursor:pointer;}
     }
     .search-form{width:80% !important;}
     section{margin-bottom:90px !important;}
+    .python-logo{height: 46px !important;}
     .popular-topics, .popular-courses, .reviews, .for-business{
         border: none;
         border-radius: 0px !important;
@@ -783,56 +792,6 @@ button, .banner-inner{cursor:pointer;}
     .recommended-course{display:flex;}
     .recommended-course ul li{height:300px; text-align:center;}
     .recommended-course ul li img{width:85%;}
-    .btn_menu_mobile, .btn_search_mobile{cursor:pointer;}
-    .nav ul li a{height:50px;line-height:50px;font-size:15px;}
-    .bold{font-size:16px !important;font-weight:bold;border-bottom:1px solid #ccc;}
-    .gnb_nav{display:none;}
-    .btn_menu_mobile{
-        width:30px;
-        height:30px;
-        background:url('../images/hamburger.svg')no-repeat 0 0 !important;
-    }
-    .gnb_nav li ul li a{
-        background:url('../images/next_btn.svg')no-repeat right;
-        background-size:15px;
-    }
-    .gnb_nav li ul li:hover a{
-        font-weight:bold;
-        background:#eee url('../images/next_btn.svg')no-repeat right;
-        background-size:15px;
-    }
-    .header-btn{
-        display:flex;
-        justify-content: space-evenly;
-        padding:20px 0;
-    }
-    .header-btn a{
-        display:inline-block;
-        width:160px;
-        padding:8px 0;
-        text-align:center;
-        border:1px solid #ccc;
-        border-radius:50px;
-    }
-    .header-btn a:hover{background:#eee;}
-    .python-logo{height: 46px !important;}
-    .gnb_nav>li>a{position:relative;}
-    .open-courses, .open-services{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .nav.mobile li a.active .sub_menu_toggle_btn {
-        transform: rotate(180deg);
-        }
-    .banner2{
-        min-height: 240px;
-        width:100%;
-        background-size:cover;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
     .recommended-courses .swiper-slide img{width:100%; }
     .swiper-slide{width:80% !important;text-align: center;}
     .swiper-slide img{border:1px solid #ccc;}
@@ -854,8 +813,6 @@ button, .banner-inner{cursor:pointer;}
     }
     .banner .swiper-pagination{
         top: var(--swiper-pagination-top, 120px)!important;}
-    .banner2{border:none !important;}
-    .free-courses{border:none !important;}
     .free-courses-list{flex-wrap: wrap;}
     .course-card img {width:150px;}
     .topic.col-1.hidden{display: none !important;}
@@ -873,6 +830,14 @@ button, .banner-inner{cursor:pointer;}
         height: 100%;
     }
     .giftbox{width:80%;}
+    .free-pdf{
+        min-height: 240px;
+        width:100%;
+        background-size:cover;
+    }
+    .free-pdf-description{padding-top:80px;}
+    .pdf-banner{height:auto;}
+    .event-banner2>.row{justify-content: space-between;}
 }
 /*footer style*/
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}
