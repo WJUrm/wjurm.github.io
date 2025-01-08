@@ -238,7 +238,6 @@ section{margin-bottom:90px !important;}
     border-bottom: none;
     background: white;
 }
-.popular-topics{background:#fcfcfc;}
 .popular-courses, .reviews, .free-courses, .free-pdf {
     background: none;
 }
@@ -277,7 +276,6 @@ section{margin-bottom:90px !important;}
 }
 .course-info {
     flex: 1;
-    padding-right: 20px;
     text-align: center;
 }
 .course-image {
@@ -418,8 +416,16 @@ section{margin-bottom:90px !important;}
 .colored{color:#b987bb;padding-right:10px;}
 .for-business{background:#eee;}
 .for-business h2{margin:20px 0;}
-.for-business-logos{display:flex;}
-.for-business-logos img{width:33.33333%;border:1px solid #eee;}
+.for-business-logos{
+    display:flex;
+    justify-content: space-between;
+    gap:10px;
+}
+.for-business-logos img{
+    width:33%;
+    border:1px solid #eee;
+    box-shadow: 1px 1px 3px #ccc;
+}
 .for-business .center{
     margin:50px 0;
     display: flex;
@@ -538,13 +544,13 @@ section{margin-bottom:90px !important;}
     transform: scale(1.01) !important;
 } 
 .for-business img:hover{
-    border:none;
     transition: all 0.2s linear;
     transform: scale(1.01) !important;
 } 
 .for-business-middle.no-mobile{
     display: flex;
     flex-direction: column;
+    gap: 10px;
     justify-content: center;
 }
 .search-section h2{margin-bottom:0px !important;}
@@ -618,6 +624,7 @@ section{margin-bottom:90px !important;}
         justify-content: center;
     }
     .container.PC .service img{height:30px !important;}
+    .for-business-logos img{min-width:145px;}
 }
 @media screen and (min-width:768px) and (max-width:1024px){
     .Tablet{display:block !important;}
@@ -690,7 +697,7 @@ section{margin-bottom:90px !important;}
     .container form{position:relative;text-align:center;line-height:60px;}
     .course-image{height:auto !important;}
     .course-title {
-        font-size: 2rem!important;
+        font-size: 2em!important;
     }
     .banner {
         margin-top:107px !important;
@@ -706,6 +713,9 @@ section{margin-bottom:90px !important;}
     .free-course-card-in{padding-left:10px;}
     .card{width:32%;}
     .question-answer {padding: 30px 25px 15px 0;}
+    .for-business-middle.no-mobile {
+        justify-content: center;
+    }
 }
 @media screen and (max-width:767px){
     .PC, .Tablet{display:none !important;}
@@ -889,6 +899,9 @@ section{margin-bottom:90px !important;}
     .card{padding: 2em 1em;}
     .course-card img {padding:10px 10px;}
     .col-2, .col-4{margin-right:0 !important;}
+    .for-business-logos{padding-bottom: 10px;}
+    .notice{padding-right:0px;}
+    .notice .swiper2 a{font-size:0.9m; height:70px; text-overflow:ellipsis; overflow:hidden;white-space: nowrap;}
 }
 /*footer style*/
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}
