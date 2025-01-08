@@ -172,8 +172,8 @@ section{margin-bottom:90px !important;}
     }
 .notice {
     height:70px;
-    line-height:50px;
-    padding: 10px 20px;
+    line-height:70px;
+    padding: 0px 20px;
     font-size: 18px;
     border-bottom: 1px solid #eee;
     margin-bottom:40px !important;
@@ -181,8 +181,9 @@ section{margin-bottom:90px !important;}
 .notice_container{
     display: flex;
     justify-content: space-between;
+    height:70px;
 }
-.notice_container ul{width: calc(100% - 100px);}
+.swiper2{width: calc(100% - 100px);}
 .search-section{
     height:165px;
     background:#153954;
@@ -190,9 +191,10 @@ section{margin-bottom:90px !important;}
     display:flex;
     align-items:center;
     border-radius:10px;
+    justify-content: center;
 }
 .search-section h2{
-    padding:0 40px 0 125px; 
+    padding:0 40px 0 0px; 
     font-size:24px;
 }
 .search-form{width:70%;}
@@ -214,6 +216,7 @@ section{margin-bottom:90px !important;}
     font-size: 20px;
     vertical-align: middle;
     border:none;
+    position:absolute;
 }
 .btn_search img{
     width:30px;
@@ -228,7 +231,7 @@ section{margin-bottom:90px !important;}
     border: 1px solid #ccc;
     background: white;
     width:30px;
-    height:50%;
+    height:40%;
     cursor:pointer;
 }
 .box_btn button:first-child{
@@ -378,6 +381,7 @@ section{margin-bottom:90px !important;}
     margin: 0 auto;
     justify-content: space-around;
 }
+.pdf-banner img{box-shadow: 1px 1px 3px 3px #ccc;}
 .event-banner{
     color:#f7d13c;
     background:url('../images/bannerlong01.png')no-repeat 0 100%;
@@ -542,6 +546,9 @@ section{margin-bottom:90px !important;}
     flex-direction: column;
     justify-content: center;
 }
+.search-section h2{margin-bottom:0px !important;}
+.search-form{position:relative;}
+
 @media screen and (min-width:1025px){
     header{
         display: block;
@@ -833,12 +840,13 @@ section{margin-bottom:90px !important;}
     .swiper-slide{/*width:80% !important;*/text-align: center;}
     .swiper-slide img{border:1px solid #ccc;}
     .banner .swiper-slide img{border:none;}
+    .notice .swiper-slide{text-align:left !important;}
     #book_frame{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .box_btn{display:none;}
+
     .no-mobile{display:none !important;}
     .course-card{
         width:100%;
@@ -879,6 +887,7 @@ section{margin-bottom:90px !important;}
     }
     .card{padding: 2em 1em;}
     .course-card img {padding:10px 10px;}
+    .col-2, .col-4{margin-right:0 !important;}
 }
 /*footer style*/
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}
