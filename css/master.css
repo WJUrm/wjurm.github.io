@@ -895,7 +895,7 @@ body footer p:first-child{font-size:calc(1em + 1px);}
 
 .row {
 	overflow: hidden;
-	width: 100%;
+	width: 98%;
 	max-width: 1400px;
 	min-width: 755px;
 	margin: 0 auto 2%;
