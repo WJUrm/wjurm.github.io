@@ -899,9 +899,16 @@ section{margin-bottom:90px !important;}
     .card{padding: 2em 1em;}
     .course-card img {padding:10px 10px;}
     .col-2, .col-4{margin-right:0 !important;}
-    .for-business-logos{padding-bottom: 10px;}
+    .for-business-logos{padding-bottom: 10px;justify-content: space-evenly;}
     .notice{padding-right:0px;}
-    .notice .swiper2 a{font-size:0.9m; height:70px; text-overflow:ellipsis; overflow:hidden;white-space: nowrap;}
+    .notice .swiper2 a{
+        font-size:0.9m; 
+        height:70px; 
+        text-overflow:ellipsis; 
+        overflow:hidden;
+        white-space: nowrap;
+    }
+    .for-business-logos img{width:30% !important;}
 }
 /*footer style*/
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}
@@ -966,4 +973,51 @@ img, iframe { height: auto; }
 		margin-left: 0;
 		margin-right: 0;
 	}
+}
+
+/*swiper*/
+.swiper3 {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: block;
+}
+
+.swiper-button-next2:after, .swiper-button-prev2:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+
+.swiper-button-prev2:after, .swiper-rtl .swiper-button-next2:after {
+    content: 'prev';
+}
+
+.swiper-button-next2:after, .swiper-rtl .swiper-button-prev2:after {
+    content: 'next';
+}
+
+.swiper-button-next2, .swiper-button-prev2 {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    width: calc(var(--swiper-navigation-size) / 44* 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.swiper-button-next2, .swiper-rtl .swiper-button-prev2 {
+    right: var(--swiper-navigation-sides-offset, 10px);
+    left: auto;
 }
