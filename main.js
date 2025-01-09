@@ -106,3 +106,18 @@ var swiper = new Swiper(".mySwiper", {
    clickable: true,
  },
 });
+
+var swiper3 = new Swiper(".mySwiper3", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+     nextEl: ".swiper-button-next2",
+     prevEl: ".swiper-button-prev2",
+   },
+  pagination: {
+  el: ".swiper-pagination",
+  clickable: true,
+  },
+});
