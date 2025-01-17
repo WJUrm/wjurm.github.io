@@ -4,7 +4,7 @@
     padding:0;
     box-sizing: border-box;
 }
-ul{list-style:none;}
+ul, li{list-style:none;}
 a{
     text-decoration:none; 
     color:black;
@@ -27,12 +27,12 @@ h2 {
 }
 /*header style*/
 .btn_menu_mobile img, .btn_search_mobile{width:30px;}
-.container img, .containerTablet img{
+header .container img, header .containerTablet img{
     float:left;
     height : 60px;
 }
 h1 img{height:60px;}
-.container form input[type="search"]{
+header .container form input[type="search"]{
     width:350px;
     outline-style: none;
     border:1px solid #ccc;
@@ -56,8 +56,8 @@ button, .banner-inner{cursor:pointer;}
     width:20px;
     height:20px;
     position: absolute;
-    right: 0;
-    top: 20px;
+    right: 18px;
+    top: 10px;
 }
 .btn_menu_mobile.active{
     background:url('../images/cancel.svg');
@@ -92,6 +92,7 @@ button, .banner-inner{cursor:pointer;}
     background:url('../images/up_btn.svg')no-repeat 0 0;
     transition: transform 0.3s ease;
 }
+body section:first-of-type{margin-top:61px}
 /*contents style*/
 section{margin-bottom:90px !important;}
 .banner {
@@ -246,7 +247,6 @@ section{margin-bottom:90px !important;}
     padding: 1%;
     text-align: center;
     border-radius: 8px;
-    cursor:pointer;
 }
 .topic{
     display:flex;
@@ -413,7 +413,7 @@ section{margin-bottom:90px !important;}
 .for-business{
     position:relative;
 }
-.colored{color:#b987bb;padding-right:10px;}
+.colored{color:#3e3b78;padding-right:10px;}
 .for-business{background:#eee;}
 .for-business h2{margin:20px 0;}
 .for-business-logos{
@@ -442,22 +442,22 @@ section{margin-bottom:90px !important;}
     background:white;
     padding:20px 24px;
     margin-bottom:10px;
-    border:1px solid #b987bb;
+    border:1px solid #3e3b78;
     border-radius:10px;
     cursor:pointer;
     position:relative;
 }
 .additional-box{
     width:95%;
-    background:#b987bb;
+    background:#3e3b78;
     color:white;
     padding:20px 24px;
     margin-bottom:10px;
-    border:1px solid #b987bb;
+    border:1px solid #3e3b78;
     border-radius:10px;
     cursor:pointer;
 }
-.additional-box:hover{background:#6a4a6b;}
+.additional-box:hover{background:#24224e;}
 .additional-box p{text-align: center;}
 .question-question{
     display: flex;
@@ -555,7 +555,12 @@ section{margin-bottom:90px !important;}
 }
 .search-section h2{margin-bottom:0px !important;}
 .search-form{position:relative;}
-
+.course-name{
+    height:3em;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 @media screen and (min-width:1025px){
     header{
         display: block;
@@ -570,7 +575,7 @@ section{margin-bottom:90px !important;}
     .nav ul li{float:left; line-height:80px; margin-left:80px;}
     .nav ul li a{font-size:15px;font-weight:bold;}
     .Tablet, .mobile{display:none !important;}
-    .container{
+    header .container{
         max-width: 1400px;
         margin:0 auto;
         position:relative;
@@ -586,22 +591,22 @@ section{margin-bottom:90px !important;}
         height:60px;
         line-height:60px;
     }
-    .container .gnb>li>a, .container .gnb>li:hover a~.lists{display:block;}
+    header .container .gnb>li>a, header .container .gnb>li:hover a~.lists{display:block;}
     .lists li:hover>a{font-weight:bold;}
     .lists{display:none;background:white;border:1px solid black; border-radius:0 0 5px 5px;border-top:1px solid #eee;}
-    .container .service{
+    header .container .service{
         display:flex;
         height:60px;
         line-height:60px;
         justify-content: space-between;
         padding-right: 1%;
     }
-    .container .gnb>li>a, .container .service>li{font-weight:bold;}
-    .container .gnb>li>ul>li{
+    header .container .gnb>li>a, header .container .service>li{font-weight:bold;}
+    header .container .gnb>li>ul>li{
         height:40px;
         line-height:40px;
     }
-    .container form{position:relative;display: inline-block;}
+    header .container form{position:relative;display: inline-block;}
     .card{width:32%;max-width:400px;}
     .event-banner{
         background:url('../images/bannerlong01.png')no-repeat 0 70%;
@@ -613,17 +618,16 @@ section{margin-bottom:90px !important;}
         flex-wrap: wrap;
     }
     .for-business-middle{padding-right:60px;padding-left:60px;}
-    .search-btn{top:4px;}
     .question-answer {padding: 30px 25px 15px 0;}
     .col-2 img{max-height: 130px;}
-    .container.PC .service{width:250px;}
-    .container.PC .service li{
+    header .container.PC .service{width:250px;}
+    header .container.PC .service li{
         display: flex;
         align-items: center;
         width: 60px;
         justify-content: center;
     }
-    .container.PC .service img{height:30px !important;}
+    header .container.PC .service img{height:30px !important;}
     .for-business-logos img{min-width:145px;}
 }
 @media screen and (min-width:768px) and (max-width:1024px){
@@ -644,7 +648,7 @@ section{margin-bottom:90px !important;}
     .profile-img{float:right;width: 45px; height:45px !important; border-radius:50px;cursor:pointer;}
     .nav ul li{float:left; line-height:80px; margin-left:80px;}
     .nav ul li a{font-size:15px;font-weight:bold;}
-    .container{
+    header .container{
         max-width: 1400px;
         margin:0 auto;
         position:relative;
@@ -690,11 +694,11 @@ section{margin-bottom:90px !important;}
         box-sizing:content-box !important;
     }
     .gnb>li>a{font-weight:bold;}
-    .container>.gnb>li>ul>li{
+    header .container>.gnb>li>ul>li{
         height:40px;
         line-height:40px;
     }
-    .container form{position:relative;text-align:center;line-height:60px;}
+    header .container form{position:relative;text-align:center;line-height:60px;}
     .course-image{height:auto !important;}
     .course-title {
         font-size: 2em!important;
@@ -716,6 +720,12 @@ section{margin-bottom:90px !important;}
     .for-business-middle.no-mobile {
         justify-content: center;
     }
+    .search-btn{top:22px;}
+    .search-page{margin-top: 91px !important;}
+    .result-card {
+        width: 48% !important;
+    }
+    section:first-of-type{margin-top: 91px !important;}
 }
 @media screen and (max-width:767px){
     .PC, .Tablet{display:none !important;}
@@ -804,7 +814,9 @@ section{margin-bottom:90px !important;}
         width:calc(100% - 80px) !important;
     }
     .search-form{width:80% !important;}
-    section{margin-bottom:45px !important;}
+    section{
+        margin-bottom:45px !important;
+    }
     .python-logo{height: 46px !important;}
     .popular-topics, .popular-courses, .reviews, .for-business{
         border: none;
@@ -909,6 +921,35 @@ section{margin-bottom:90px !important;}
         white-space: nowrap;
     }
     .for-business-logos img{width:30% !important;}
+    .search-page .flex{justify-content: center;}
+    .search-page .sidebar{display:none;}
+    .result-card{width:100% !important;}
+    .search-results{width:90% !important; }
+    .myclass-section .sidebar{display:none;}
+    .container-inner{justify-content: center;}
+    .inner, .container-inner{width:100% !important;}
+    .list-learning{flex-direction: column;}
+    .list-learning>li{width:98% !important;}
+    .list-activity{flex-direction: column;}
+    .list-activity li:first-child{margin-bottom:15px;}
+    .content.page_content_body {
+        width: 90% !important;
+    }
+    aside{display:none !important;}
+    .col-xl-9{max-width:100% !important;}
+    .container-lg{flex-direction: column;}
+    .box-activity:last-child .section-box-spacing{padding-top:0px !important;}
+    .search-filter{display:block !important;}
+    .popular-topics .grid, .mobile-padding{
+        width: 95% !important;
+        margin: 0 auto;
+    }
+}
+
+:root{
+    --primary: #3e3b78;
+    --border-color: rgb(225, 225, 232);
+    --background-normal: rgb(255, 255, 255);
 }
 /*footer style*/
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}
@@ -958,7 +999,7 @@ img, iframe { height: auto; }
 /* Tablet Size: 1024 이하 */
 @media only screen and (max-width: 1023px) {
 	body {
-		font-size: 0.9em;
+		font-size: 1em;
 		line-height: 1.5;
 	}
 }
@@ -967,7 +1008,7 @@ img, iframe { height: auto; }
 /* Mobile Size: 767px 이하 */
 @media handheld, only screen and (max-width: 767px) {
 	body { font-size: 16px; }
-	.row, body, .container {
+	.row, body, header .container {
 		width: 100%;
 		min-width: 0;
 		margin-left: 0;
