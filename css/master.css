@@ -185,7 +185,7 @@ section{margin-bottom:90px !important;}
     height:70px;
 }
 .swiper2{width: calc(100% - 100px);}
-.search-section{
+.search-section .mobile-padding{
     height:165px;
     background:#153954;
     color:white;
@@ -285,7 +285,8 @@ section{margin-bottom:90px !important;}
 }
 .course-title{font-size:2.8rem !important;margin-bottom:24px;}
 .course-intro{font-size:1.1em; margin-bottom:24px;}
-.course-info button{
+.course-info a{
+    display:inline-block !important;
     padding:15px 40px;
     border-radius:50px;
     outline:none;
@@ -293,8 +294,9 @@ section{margin-bottom:90px !important;}
     box-shadow:1px 1px 3px #150f2c;
     background:#5936fe;
     color:white;
+    font-size:0.9em;
 }
-.course-info button:hover{
+.course-info a:hover{
     background:#3e3b78;
 }
 .course-image a{height:100%;display: flex;}
@@ -463,7 +465,7 @@ section{margin-bottom:90px !important;}
     display: flex;
     align-items: center;
 }
-.question-question img{max-height:25px;padding-left:1%;}
+.question-question img{max-height:24px;padding-left:1%;}
 .additional-box .question-question{justify-content: center;}
 .question-answer{padding:30px 0 10px;}
 .arrow-icon {
@@ -560,6 +562,7 @@ section{margin-bottom:90px !important;}
     display: block;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin-bottom:5px;
 }
 @media screen and (min-width:1025px){
     header{
@@ -912,7 +915,7 @@ section{margin-bottom:90px !important;}
     .course-card img {padding:10px 10px;}
     .col-2, .col-4{margin-right:0 !important;}
     .for-business-logos{padding-bottom: 10px;justify-content: space-evenly;}
-    .notice{padding-right:0px;}
+    .notice{padding:0 2.5%;}
     .notice .swiper2 a{
         font-size:0.9m; 
         height:70px; 
@@ -945,6 +948,8 @@ section{margin-bottom:90px !important;}
         margin: 0 auto;
     }
 }
+
+#tabContents_5 .card2{margin-bottom:0px !important;}
 
 :root{
     --primary: #3e3b78;
