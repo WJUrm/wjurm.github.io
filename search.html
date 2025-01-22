@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색결과</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .margin{height:20px;}
+        .flex{display:flex;}
+        .sidebar{
+            width:25%;
+            min-width:155px;
+            box-sizing: border-box;
+            /*border: 1px solid #e0e0e0;*/
+        }
+        .search-page h2 {padding:10px 0;}
+        .sidebar .flex{flex-direction: column;}
+        .search-option{margin-bottom:20px;}
+        .search-results{
+            width:75%;
+            box-sizing: border-box;
+            /*border: 1px solid #e0e0e0;*/
+        }
+        .search-result-cards{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .result-card{
+            width:32%;
+            height:410px;
+            border:1px solid #ccc;
+            border-radius:10px;
+            margin-bottom:40px;
+
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .preview-img{
+            width:95%; 
+            height:180px;
+            background:#eee;
+            margin:10px auto;
+            border-radius:10px;
+        }
+        .preview-text{padding:10px;}
+        .em09{font-size:0.9em;margin-top:10px;height:115px; overflow:hidden;}
+        .search-page h2{margin-bottom:30px;}
+        .search-subject input{margin-right:5px;}
+        .root{text-align:center;}
+        .root a{display:inline-block;}
+        .sidebar button{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            padding: 5px 10px;
+            border: .0625rem solid #e1e1e8;
+            border-radius: 5px 5px 0 0;
+            background: linear-gradient(0deg, #f3f5f8 0%, #fff 100%);
+            font-weight: 400;
+            color: #313338;
+        }
+        h3{font-size:18.72px;}
+        .sidebar button img{height:20px;}
+        .search-subject{display:none;}
+        .search-subject{
+            border: .0625rem solid #e1e1e8;
+            border-top: none;
+            width: 80%;
+            padding: 3%;
+        }
+        .search-subject li{padding: 0 5px;}
+        .root a{
+            width:32px; 
+            height:32px; 
+            border: 1px solid #e1e1e8;
+            border-radius:5px;
+            margin:3px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .root a:nth-child(2){
+            color:white;
+            background:#3e3b78;
+        }
+        .search-filter{
+            background:none;
+            border:none;
+            width:25px;
+            height:25px;
+            padding:0;
+            position: absolute;
+            right: 0;
+        }
+        .search-filter img{width:25px;height:25px;}
+        .search-results h2{
+            display: flex;
+            position: relative;
+            align-items: center;
+        }
+        .open-menu{display:block;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.btn_menu_mobile').click(function(){
+                $('.gnb_nav').stop().slideToggle('fast');
+            })
+        })
+        $(function(){
+            $('.open-courses').click(function(){
+                $('.course-list').stop().slideToggle('fast');
+            })
+        })
+        $(function(){
+            $('.open-services').click(function(){
+                $('.service-list').stop().slideToggle('fast');
+            })
+        })
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header id="header">
+        <div class="container PC">
+            <h1>
+                <a href="main.html"><img src="images/Logo2.svg"></a>
+            </h1>
+            <div class="logo-and-gnb">
+                <ul class="gnb">
+                    <li>
+                        <a href="#">강의</a>
+                        <ul class="lists">
+                            <li><a href="search.html">HTMl</a></li>
+                            <li><a href="search.html">CSS</a></li>
+                            <li><a href="search.html">JAVASCRIPT</a></li>
+                            <li><a href="search.html">PYTHON</a></li>
+                            <li><a href="search.html">PHP</a></li>
+                            <li><a href="search.html">SQL</a></li>
+                            <li><a href="search.html">C</a></li>
+                            <li><a href="search.html">C++</a></li>
+                            <li><a href="search.html">REACT</a></li>
+                            <li><a href="search.html">JQUERY</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티</a>
+                        <ul class="lists">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">질문/답변</a></li>
+                            <li><a href="#">수강평</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form method="post">
+                    <input type="search" placeholder="무엇을 배우고 싶으세요?">
+                    <button class="search-btn"></button>
+                </form>
+                <ul class="service">
+                    <li class="login"><a href="login.html"><img src="images/login.svg" alt="로그인"></a></li>
+                    <li class="register"><a href="#"><img src="images/join.svg" alt="회원가입"></a></li>
+                    <li><a href="myclassroom.html"><img src="images/myclass.svg" alt="나의 강의실"></a></li>
+                    <li><a href="#"><img src="images/service.svg" alt="고객센터"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container Tablet">
+            <div class="tablet-header">
+                <h1>
+                    <a href="main.html"><img src="images/Logo2.svg"></a>
+                </h1>
+                <form method="post">
+                    <input type="search" placeholder="무엇을 배우고 싶으세요?">
+                    <button class="search-btn"></button>
+                </form>
+                <img src="images/profile.svg" class="profile-img">
+            </div>
+            </div>
+        <ul class="gnb Tablet">
+            <div class="header-gap">
+                <li>
+                    <a href="category.html">강의</a>
+                    <ul class="lists">
+                        <li><a href="#">HTMl</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JAVASCRIPT</a></li>
+                        <li><a href="#">PYTHON</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">SQL</a></li>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">C++</a></li>
+                        <li><a href="#">REACT</a></li>
+                        <li><a href="#">JQUERY</a></li>
+                    </ul>
+                </li>
+                <li><a href="community.html">커뮤니티</a>
+                    <ul class="lists">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">질문/답변</a></li>
+                        <li><a href="#">수강평</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">나의 강의실</a></li>
+                <li><a href="#">고객센터</a></li>
+            </div>
+        </ul>
+        <ul class="gnb mobile">
+            <span class="btn_menu_mobile" title="메뉴">
+                
+            </span>
+            <h1 class="logo-mobile">
+                <a href="main.html"><img src="images/Logo2.svg"></a>
+            </h1>
+            <div class="hidden btn_search_hidden">
+                <input type="search" placeholder="무엇을 배우고 싶으세요?">
+
+            </div>
+            <button type="button" name="search" class="btn_search_mobile" title="검색">
+                <img src="images/search.svg">
+            </button>
+        </ul>
+        <nav class="nav mobile">
+            <ul class="gnb_nav">
+                <div class="header-btn">
+                    <a href="#" class="login-mobile">로그인</a>
+                    <a href="#" class="login-join">회원가입</a>
+                </div>
+                <li>
+                    <a href="#" class="bold open-courses">
+                        강의<span class="sub_menu_toggle_btn"></span>
+                    </a>
+                    <ul class="course-list">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JAVASCRIPT</a></li>
+                        <li><a href="#">PYTHON</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">SQL</a></li>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">C++</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="bold open-services">
+                        커뮤니티<span class="sub_menu_toggle_btn"></span>
+                    </a>
+                    <ul class="service-list">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">질문/답변</a></li>
+                        <li><a href="#">수강평</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--header end-->
+
+    <section class="search-page">
+        <div class="margin"></div>
+        <div class="row">
+            <div class="flex">
+                <div class="sidebar">
+                    <h2>필터링 기준</h2>
+                    <div class="flex">
+                        <div class="search-option subject">
+                            <button><h3>과목</h3><img src="images/down_btn.svg" alt="arrow" class="subject-arrow"></button>
+                            <ul class="search-subject subject">
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">HTML</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">CSS</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">JAVASCRIPT</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">PYTHON</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">PHP</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">SQL</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">C</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">C++</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">REACT</li>
+                                <li><input id="HTML" class="idk" type="checkbox" value="HTML">JQUERY</li>
+                            </ul>
+                        </div>
+                        <div class="search-option difficulty">
+                            <button><h3>학습 난이도</h3><img src="images/down_btn.svg" alt="arrow" class="difficulty-arrow"></button>
+                            <ul class="search-subject difficulty">
+                                <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">쉬움</li>
+                                <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">보통</li>
+                                <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">어려움</li>
+                            </ul>
+                        </div>
+                        <div class="search-option free-or-not">
+                            <button><h3>강의 가격</h3><img src="images/down_btn.svg" alt="arrow" class="price-arrow"></button>
+                            <ul class="search-subject free-or-not">
+                                <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">무료</li>
+                                <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">유료</li>
+                            </ul>
+                        </div>
+                        <div class="search-option"></div>
+                    </div>
+                </div>
+                <div class="search-results">
+                    <h2>""에 대한 검색 결과<button class="search-filter" style="display:none;"><img src="images/search-filter.svg"></button></h2>
+                    
+                    <div></div>
+                    <ul class="search-result-cards">
+                        <li class="result-card">
+                            <div class="preview-img"></div>
+                            <div class="preview-text">
+                            <h4>HTML, CSS, 자바스크립트 소개</h4>
+                            <p>김태식</p>
+                            <p class="em09">HTML을 사용하여 기본 웹 페이지를 생성 및 구성하고 CSS로 스타일을 지정합니다. JavaScript를 사용하여 대화형 기능을 갖춘 동적 웹 페이지를 개발하세요.</p>
+                            </div>
+                        </li>
+                        <li class="result-card">
+                            <div class="preview-img"></div>
+                            <div class="preview-text">
+                            <h4>모든 개발자를 위한 HTTP 웹 기본 지식</h4>
+                            <p>김영한</p>
+                            <p class="em09">실무에 꼭 필요한 HTTP 핵심 기능과 올바른 HTTP API 설계 방법을 학습합니다.</p>
+                            </div>
+                        </li>
+                        <li class="result-card">
+                            <div class="preview-img"></div>
+                            <div class="preview-text">
+                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
+                            <p>참다래</p>
+                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
+                            </div>
+                        </li>
+                        <li class="result-card">
+                            <div class="preview-img"></div>
+                            <div class="preview-text">
+                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
+                            <p>참다래</p>
+                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
+                            </div>
+                        </li>
+                        <li class="result-card">
+                            <div class="preview-img"></div>
+                            <div class="preview-text">
+                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
+                            <p>참다래</p>
+                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
+                            </div>
+                        </li>
+                        <li class="result-card">
+                            <div class="preview-img"></div>
+                            <div class="preview-text">
+                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
+                            <p>참다래</p>
+                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="root">
+                        <a href="#" id="before_btn">&lt;</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#" id="next_btn">&gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <p>개인정보처리방침
+            이용약관
+            (주)캐치코드 사업자 정보 
+        <p>대표자: 엄우진 | 사업자번호: 999-00-00000 사업자 정보 확인
+            통신판매업: 20XX-서울구로-9999 | 개인정보보호책임자: 조해용</p>
+        <p>이메일: info@catchcode.com | 전화번호: 070-1234-9999 | 주소: 서울특별시 구로구 경인로10번길 20 3동 5층</p>
+        <p>©CATCHCODEKR. ALL RIGHTS RESERVED</p>
+    </footer>
+    <script src="main.js"></script> 
+    <script>
+        const subjectBtn = document.querySelector('.search-option.subject button');
+        const subjectList = document.querySelector('.search-subject.subject');
+        const subjectArrow = document.querySelector('.subject-arrow')
+        subjectBtn.addEventListener('click', () => {
+            subjectList.classList.toggle('open-menu');
+            subjectArrow.classList.toggle('active');
+        });
+
+        const difficultyBtn = document.querySelector('.search-option.difficulty button');
+        const difficultyList = document.querySelector('.search-subject.difficulty');
+        difficultyBtn.addEventListener('click', () => {
+            difficultyList.classList.toggle('open-menu');
+        });
+
+        const priceBtn = document.querySelector('.search-option.free-or-not button');
+        const priceList = document.querySelector('.search-subject.free-or-not');
+        priceBtn.addEventListener('click', () => {
+            priceList.classList.toggle('open-menu');
+        });
+    </script>
+
+</body>
+</html>
