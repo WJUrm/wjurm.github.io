@@ -10,6 +10,7 @@ a{
     color:black;
     display:block;
 }
+.morefaq{padding:0 1%;}
 input {
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
