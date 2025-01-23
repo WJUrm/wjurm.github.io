@@ -38,6 +38,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            cursor:pointer;
         }
         .preview-img{
             width:95%; 
@@ -52,20 +53,8 @@
         .search-subject input{margin-right:5px;}
         .root{text-align:center;}
         .root a{display:inline-block;}
-        .sidebar button{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 80%;
-            padding: 5px 10px;
-            border: .0625rem solid #e1e1e8;
-            border-radius: 5px 5px 0 0;
-            background: linear-gradient(0deg, #f3f5f8 0%, #fff 100%);
-            font-weight: 400;
-            color: #313338;
-        }
         h3{font-size:18.72px;}
-        .sidebar button img{height:20px;}
+
         .search-subject{display:none;}
         .search-subject{
             border: .0625rem solid #e1e1e8;
@@ -95,7 +84,7 @@
             height:25px;
             padding:0;
             position: absolute;
-            right: 0;
+            right: 5px;
         }
         .search-filter img{width:25px;height:25px;}
         .search-results h2{
@@ -301,67 +290,102 @@
                     </div>
                 </div>
                 <div class="search-results">
-                    <h2>""에 대한 검색 결과<button class="search-filter" style="display:none;"><img src="images/search-filter.svg"></button></h2>
-                    
-                    <div></div>
-                    <ul class="search-result-cards">
-                        <li class="result-card">
-                            <div class="preview-img"></div>
-                            <div class="preview-text">
-                            <h4>HTML, CSS, 자바스크립트 소개</h4>
-                            <p>김태식</p>
-                            <p class="em09">HTML을 사용하여 기본 웹 페이지를 생성 및 구성하고 CSS로 스타일을 지정합니다. JavaScript를 사용하여 대화형 기능을 갖춘 동적 웹 페이지를 개발하세요.</p>
+                    <div class="search-results-header-mobile">
+                        <h2>""에 대한 검색 결과<button class="search-filter"><img src="images/search-filter.svg"></button></h2>
+                        <div class="search-filter-hidden">
+                            <div class="search-option subject mobile">
+                                <button><h3>과목</h3><img src="images/down_btn.svg" alt="arrow" class="subject-arrow"></button>
+                                <ul class="search-subject subject">
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">HTML</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">CSS</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">JAVASCRIPT</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">PYTHON</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">PHP</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">SQL</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">C</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">C++</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">REACT</li>
+                                    <li><input id="HTML" class="idk" type="checkbox" value="HTML">JQUERY</li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="result-card">
-                            <div class="preview-img"></div>
-                            <div class="preview-text">
-                            <h4>모든 개발자를 위한 HTTP 웹 기본 지식</h4>
-                            <p>김영한</p>
-                            <p class="em09">실무에 꼭 필요한 HTTP 핵심 기능과 올바른 HTTP API 설계 방법을 학습합니다.</p>
+                            <div class="search-option difficulty mobile">
+                                <button><h3>학습 난이도</h3><img src="images/down_btn.svg" alt="arrow" class="difficulty-arrow"></button>
+                                <ul class="search-subject difficulty">
+                                    <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">쉬움</li>
+                                    <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">보통</li>
+                                    <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">어려움</li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="result-card">
-                            <div class="preview-img"></div>
-                            <div class="preview-text">
-                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
-                            <p>참다래</p>
-                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
+                            <div class="search-option free-or-not mobile">
+                                <button><h3>강의 가격</h3><img src="images/down_btn.svg" alt="arrow" class="price-arrow"></button>
+                                <ul class="search-subject free-or-not">
+                                    <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">무료</li>
+                                    <li class="difficulty-list"><input id="HTML" class="idk" type="checkbox" value="HTML">유료</li>
+                                </ul>
                             </div>
-                        </li>
-                        <li class="result-card">
-                            <div class="preview-img"></div>
-                            <div class="preview-text">
-                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
-                            <p>참다래</p>
-                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
-                            </div>
-                        </li>
-                        <li class="result-card">
-                            <div class="preview-img"></div>
-                            <div class="preview-text">
-                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
-                            <p>참다래</p>
-                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
-                            </div>
-                        </li>
-                        <li class="result-card">
-                            <div class="preview-img"></div>
-                            <div class="preview-text">
-                            <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
-                            <p>참다래</p>
-                            <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="root">
-                        <a href="#" id="before_btn">&lt;</a>
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#" id="next_btn">&gt;</a>
+                            <div class="search-option"></div>
+                        </div>
+                    </div>
+                    <div class="search-results-mobile">
+                        <ul class="search-result-cards">
+                            <li class="result-card">
+                                <div class="preview-img"><img src="images/search00.png"></div>
+                                <div class="preview-text">
+                                <h4>HTML, CSS, 자바스크립트 소개</h4>
+                                <p>김태식</p>
+                                <p class="em09">HTML을 사용하여 기본 웹 페이지를 생성 및 구성하고 CSS로 스타일을 지정합니다. JavaScript를 사용하여 대화형 기능을 갖춘 동적 웹 페이지를 개발하세요.</p>
+                                </div>
+                            </li>
+                            <li class="result-card">
+                                <div class="preview-img"><img src="images/course00.png"></div>
+                                <div class="preview-text">
+                                <h4>모든 개발자를 위한 HTTP 웹 기본 지식</h4>
+                                <p>김영한</p>
+                                <p class="em09">실무에 꼭 필요한 HTTP 핵심 기능과 올바른 HTTP API 설계 방법을 학습합니다.</p>
+                                </div>
+                            </li>
+                            <li class="result-card">
+                                <div class="preview-img"><img src="images/search01.png"></div>
+                                <div class="preview-text">
+                                <h4>모두를 위한 코딩: C 및 C++ 특화 과정</h4>
+                                <p>참다래</p>
+                                <p class="em09">C와 C++로 복잡한 문제를 코딩, 디버깅 및 해결하는 방법을 배워 컴퓨터 프로그래밍에 대한 깊은 이해를 얻으세요.</p>
+                                </div>
+                            </li>
+                            <li class="result-card">
+                                <div class="preview-img"><img src="images/search02.png"></div>
+                                <div class="preview-text">
+                                <h4>PHP로 웹 애플리케이션 구축</h4>
+                                <p>찰떡코딩</p>
+                                <p class="em09">PHP의 기본 구문과 데이터 구조, 변수, 논리, 반복, 배열, 오류 처리, 수퍼 전역 변수 등의 요소에 대해 알아보세요.</p>
+                                </div>
+                            </li>
+                            <li class="result-card">
+                                <div class="preview-img"><img src="images/search03.png"></div>
+                                <div class="preview-text">
+                                <h4>React 배우기</h4>
+                                <p>Bob</p>
+                                <p class="em09">React를 활용하여 다양한 실제 프로젝트를 구축하세요.</p>
+                                </div>
+                            </li>
+                            <li class="result-card">
+                                <div class="preview-img"><img src="images/search04.png"></div>
+                                <div class="preview-text">
+                                <h4>실전! SQL 입문</h4>
+                                <p>신동현</p>
+                                <p class="em09">SQL의 특징을 이해하고, 필요한 데이터를 스스로 추출할 수 있는 능력을 키웁니다.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="root">
+                            <a href="#" id="before_btn">&lt;</a>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#" id="next_btn">&gt;</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -398,6 +422,32 @@
         const priceList = document.querySelector('.search-subject.free-or-not');
         priceBtn.addEventListener('click', () => {
             priceList.classList.toggle('open-menu');
+        });
+
+        const subjectBtn2 = document.querySelector('.search-option.subject.mobile button');
+        const subjectList2 = document.querySelector('.search-option.subject.mobile .search-subject.subject');
+        const subjectArrow2 = document.querySelector('.subject-arrow')
+        subjectBtn2.addEventListener('click', () => {
+            subjectList2.classList.toggle('open-menu');
+            subjectArrow2.classList.toggle('active');
+        });
+
+        const difficultyBtn2 = document.querySelector('.search-option.difficulty.mobile button');
+        const difficultyList2 = document.querySelector('.search-option.difficulty.mobile .search-subject.difficulty');
+        difficultyBtn2.addEventListener('click', () => {
+            difficultyList2.classList.toggle('open-menu');
+        });
+
+        const priceBtn2 = document.querySelector('.search-option.free-or-not.mobile button');
+        const priceList2 = document.querySelector('.search-option.free-or-not.mobile .search-subject.free-or-not');
+        priceBtn2.addEventListener('click', () => {
+            priceList2.classList.toggle('open-menu');
+        });
+
+        const btnSearchFilter = document.querySelector('.search-filter img');
+        const searchFilterHidden = document.querySelector('.search-filter-hidden')
+        btnSearchFilter.addEventListener('click', () => {
+        searchFilterHidden.classList.toggle('active');
         });
     </script>
 

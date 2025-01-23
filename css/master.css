@@ -568,6 +568,7 @@ section{margin-bottom:90px !important;}
 }
 .bannerNormal{display:block;}
 .bannerMobile{display:none;}
+.search-filter{display:none;}
 @media screen and (min-width:1025px){
     header{
         display: block;
@@ -987,6 +988,12 @@ section{margin-bottom:90px !important;}
     width: 100%;
 }
 .sidebar button img, .search-filter-hidden button img{height:20px;}
+.preview-img{overflow:hidden;}
+.preview-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 :root{
     --primary: #3e3b78;
     --border-color: rgb(225, 225, 232);
