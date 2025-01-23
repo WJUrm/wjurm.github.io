@@ -185,7 +185,7 @@ section{margin-bottom:90px !important;}
     justify-content: space-between;
     height:70px;
 }
-.swiper2{width: calc(100% - 100px);}
+.swiper2{width: calc(100% - 100px);overflow:hidden;}
 .search-section .mobile-padding{
     height:165px;
     background:#153954;
@@ -465,6 +465,7 @@ section{margin-bottom:90px !important;}
 .question-question{
     display: flex;
     align-items: center;
+    font-weight:500;
 }
 .question-question img{max-height:24px;}
 .additional-box .question-question{justify-content: center;}
@@ -565,6 +566,8 @@ section{margin-bottom:90px !important;}
     overflow: hidden;
     margin-bottom:5px;
 }
+.bannerNormal{display:block;}
+.bannerMobile{display:none;}
 @media screen and (min-width:1025px){
     header{
         display: block;
@@ -928,7 +931,14 @@ section{margin-bottom:90px !important;}
     .search-page .flex{justify-content: center;}
     .search-page .sidebar{display:none;}
     .result-card{width:100% !important;}
-    .search-results{width:90% !important; }
+    .margin{display:none;}
+    .search-results{width:100% !important; }
+    .search-results-header-mobile{
+        border-bottom:1px solid #eee;
+        margin-bottom:30px;
+    }
+    .search-results h2{width:90%; margin: 0 auto !important;}
+    .search-results-mobile{width:90%; margin: 0 auto;}
     .myclass-section .sidebar{display:none;}
     .container-inner{justify-content: center;}
     .inner, .container-inner{width:100% !important;}
@@ -949,9 +959,34 @@ section{margin-bottom:90px !important;}
         margin: 0 auto;
     }
 }
-
+@media screen and (max-width:430px){
+    .bannerNormal{display:none !important;}
+    .bannerMobile{display:block !important;}
+}
 #tabContents_5 .card2{margin-bottom:0px !important;}
-
+.search-filter-hidden{
+    width: 90%;
+    margin: 0 auto 20px;
+    display:none;
+}
+.search-filter-hidden.active{display:block;}
+.sidebar button, .search-filter-hidden button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 5px 10px;
+    border: .0625rem solid #e1e1e8;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(0deg, #f3f5f8 0%, #fff 100%);
+    font-weight: 400;
+    color: #313338;
+}
+.search-filter-hidden button{width:100%;}
+.search-filter-hidden .search-subject {
+    width: 100%;
+}
+.sidebar button img, .search-filter-hidden button img{height:20px;}
 :root{
     --primary: #3e3b78;
     --border-color: rgb(225, 225, 232);

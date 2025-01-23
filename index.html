@@ -23,13 +23,13 @@
             })
         })
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header id="header">
         <div class="container PC">
             <h1>
-                <a href="index.html"><img src="images/Logo2.svg"></a>
+                <a href="index.html"><img src="images/Logo2.svg" alt="캐치코드"></a>
             </h1>
             <div class="logo-and-gnb">
                 <ul class="gnb">
@@ -80,7 +80,7 @@
                 <img src="images/profile.svg" class="profile-img">
             </div>
             </div>
-        <ul class="gnb Tablet">
+        <div class="gnb Tablet">
             <div class="header-gap">
                 <li>
                     <a href="category.html">강의</a>
@@ -107,8 +107,8 @@
                 <li><a href="myclassroom.html">나의 강의실</a></li>
                 <li><a href="#">고객센터</a></li>
             </div>
-        </ul>
-        <ul class="gnb mobile">
+        </div>
+        <div class="gnb mobile">
             <span class="btn_menu_mobile" title="메뉴">
                 
             </span>
@@ -122,7 +122,7 @@
             <button type="button" name="search" class="btn_search_mobile" title="검색">
                 <img src="images/search.svg">
             </button>
-        </ul>
+        </div>
         <nav class="nav mobile">
             <ul class="gnb_nav">
                 <div class="header-btn">
@@ -164,13 +164,16 @@
         <div class="banner-bg"></div>
         <div class="banner-slides">
             <div class="slide active">
-                <img src="images/eventPhoto1.png" alt="이벤트 1">
+                <img class="bannerNormal" src="images/eventPhoto1.png" alt="이벤트 1">
+                <img class="bannerMobile" src="images/eventPhoto1-mobile.png" alt="이벤트 1">
             </div>
             <div class="slide">
-                <img src="images/eventPhoto2.png" alt="이벤트 2">
+                <img class="bannerNormal" src="images/eventPhoto2.png" alt="이벤트 2">
+                <img class="bannerMobile" src="images/eventPhoto2-mobile.png" alt="이벤트 2">
             </div>
             <div class="slide">
-                <img src="images/eventPhoto3.png" alt="이벤트 3">
+                <img class="bannerNormal" src="images/eventPhoto3.png" alt="이벤트 3">
+                <img class="bannerMobile" src="images/eventPhoto3-mobile.png" alt="이벤트 3">
             </div>
             <div class="banner-controls">
                 <button class="prev"><img src="images/prev_btn_white.svg"></button>
@@ -265,23 +268,23 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="images/course1.png">
-                            <h4>기초 탄탄! 독하게 시작하는 Java - Part 2 : OOP와 JVM</h4>
-                            <span>널널한 개발자</span>
+                            <strong class="course-name">기초 탄탄! 독하게 시작하는 Java - Part 2 : OOP와 JVM</strong>
+                            <p>널널한 개발자</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/course2.png">
-                            <h4>AI 블로그: 콘텐츠 기획부터 완성까지</h4>
-                            <span>홍순성</span>
+                            <strong class="course-name">AI 블로그: 콘텐츠 기획부터 완성까지</strong>
+                            <p>홍순성</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/course3.png">
-                            <h4>대규모 시스템 설계 Part 1</h4>
-                            <span>Jayce</span>
+                            <strong class="course-name">대규모 시스템 설계 Part 1</strong>
+                            <p>Jayce</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/course4.png">
-                            <h4>개발자라면 알아야 할 리눅스(linux-ubuntu) 기본</h4>
-                            <span>brad_kim</span>
+                            <strong class="course-name">개발자라면 알아야 할 리눅스(linux-ubuntu) 기본</strong>
+                            <p>brad_kim</p>
                         </div>
                     </div>
                 </div>
@@ -340,23 +343,23 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="images/course5.png">
-                            <h4>아는 만큼 보이는 크롬 개발자 도구</h4>
-                            <span>제주코딩베이스캠프</span>
+                            <strong class="course-name">아는 만큼 보이는 크롬 개발자 도구</strong>
+                            <p>제주코딩베이스캠프</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/course6.png">
-                            <h4>CSS Flex와 Grid 제대로 익히기</h4>
-                            <span>1분코딩</span>
+                            <strong class="course-name">CSS Flex와 Grid 제대로 익히기</strong>
+                            <p>1분코딩</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/course7.png">
-                            <h4>[리액트 1부] 만들고 비교하며 학습하는 리액트 (React)</h4>
-                            <span>김정환</span>
+                            <strong class="course-name">[리액트 1부] 만들고 비교하며 학습하는 리액트 (React)</strong>
+                            <p>김정환</p>
                         </div>
                         <div class="swiper-slide">
                             <img src="images/course8.png">
-                            <h4>견고한 JS 소프트웨어 만들기</h4>
-                            <span>김정환</span>
+                            <strong class="course-name">견고한 JS 소프트웨어 만들기</strong>
+                            <p>김정환</p>
                         </div>
                     </div>
                 </div>
@@ -608,6 +611,21 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script> 
     <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        });
+
         var swiper2 = new Swiper(".mySwiper2", {
             direction: "vertical",
             autoplay: {
@@ -624,6 +642,76 @@
                 prevEl: ".notice_prev",
             },
         });
+
+        var swiper3 = new Swiper(".mySwiper3", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next2",
+            prevEl: ".swiper-button-prev2",
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        });
+        //banner
+            const slides = document.querySelectorAll('.slide');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            const slideNumber = document.querySelector('.slide-number');
+            const bannerBg = document.querySelector('.banner-bg');
+
+            let currentIndex = 0;
+
+            function updateSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                    slide.classList.add('active');
+                    }
+                });
+
+            // 배경 색 변경
+            if (index === 1) {bannerBg.style.backgroundColor = '#0b0f14';}
+            else if (index === 2) {bannerBg.style.backgroundColor = '#001658';}
+            else {bannerBg.style.backgroundColor = '#004ddb';}
+
+            slideNumber.textContent = `${index + 1} / ${slides.length}`;}
+
+            //버튼 숫자 변경
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlide(currentIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateSlide(currentIndex);
+            });
+
+            updateSlide(currentIndex);
+
+            //FAQ
+            document.querySelectorAll('.question-box').forEach(box => {
+                box.addEventListener('click', () => {
+                // 이미지 회전
+                const arrow = box.querySelector('.arrow-icon');
+                if (arrow) {
+                    arrow.classList.toggle('rotated');
+                }
+
+                // 답변 표시/숨기기
+                const answer = box.querySelector('.question-answer');
+                if (answer) {
+                    answer.classList.toggle('active');
+                    answer.classList.toggle('hidden');
+                }
+                });
+            });
+
       </script>
 
 </body>
