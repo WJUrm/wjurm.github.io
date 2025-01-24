@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>회원가입</title>
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
@@ -25,15 +25,6 @@
             border: 1px solid #ccc;
             border-radius: 10px;
         }
-        div.page_title_wrap h3.page_title.login {
-            text-align: center;
-        }
-        div.page_title_wrap h3.page_title {
-            padding: 40px 0;
-            font-size: 36px;
-            font-weight: bold;
-            word-break: keep-all;
-        }
         div[data-role=login] {
             padding: 50px 80px;
             box-sizing: border-box;
@@ -48,6 +39,15 @@
             height: 60px;
             border-radius: 3px;
             box-shadow: 0 0 0 1000px white inset;
+        }
+        .login-section{position:relative;}
+        .btn-primary.disabled, .btn-primary:disabled {
+            position:absolute;
+            top: 15px;
+            right: 10px;
+            width:50px;
+            height:30px;
+            cursor: not-allowed;
         }
         div[data-role=input][data-type=input] > input {
             border: 1px solid #d1d1d1;
@@ -343,7 +343,9 @@
 
 	<div class="page_title_wrap">
 		<div class="container">
-			<h3 class="page_title login">로그인</h3>
+			<h3 class="page_title join center">회원가입</h3>
+            <h3 class="center">캐치코드에 오신 것을 환영합니다!</h4>
+            <div class="margin"></div>
 		</div>
 	</div>
 
@@ -353,27 +355,27 @@
 				<form name="loginform" onsubmit="return false">
 				<div data-role="login">
 					<input type="hidden" name="backURL" value="#">
-					<div data-role="input" data-type="input" data-name="email">
+					<div data-role="input" data-type="input" data-name="email" class="login-section">
 						<label for="userid">이메일 입력</label>
 						<input type="text" id="userid" class="tabindex" name="userid" title='이메일을 입력하세요.' placeholder='이메일을 입력하세요.' style="margin-bottom: 5px;">
+                        <button type="button" disabled class="y8TqYqOzo10gWm9Wc_Bs btn btn-primary btn-sm disabled">인증</button>
 					</div>
 					<div data-role="input" data-type="input" data-name="password">
 						<label for="password">비밀번호 입력</label>
-						<input type="password" id="password" class="tabindex" name="password" title='비밀번호를 입력하세요.' placeholder='비밀번호를 입력하세요.' autocomplete="off">
+						<input type="password" id="password" class="tabindex" name="password" title='비밀번호를 입력하세요.' placeholder='비밀번호를 입력하세요.' style="margin-bottom: 5px;" autocomplete="off">
 					</div>
-					<div class="check_search">
-						<label for="inphold">로그인 상태 유지</label>
-						<input type="checkbox" id="inphold" class="hidden" title="로그인 상태 유지" tabindex="-1">
-						<button type="button" name="checkbox"><i class="xi-check xi"></i></button>
-						<div class="search">
-							<a href="javascript:goView('/find/email');" class="email tabindex">이메일 찾기</a>
-							<a href="javascript:goView('/find/pwd');" class="password tabindex">비밀번호 찾기</a>
-						</div>
+                    <div data-role="input" data-type="input" data-name="password">
+						<label for="password">비밀번호 확인</label>
+						<input type="password" id="password" class="tabindex" name="password" title='비밀번호 확인' placeholder='비밀번호 확인' style="margin-bottom: 5px;" autocomplete="off">
+					</div>
+                    <div data-role="input" data-type="input" data-name="email">
+						<label for="userid">닉네임</label>
+						<input type="text" id="userid" class="tabindex" name="userid" title='닉네임을 입력하세요.' placeholder='닉네임을 입력하세요.' style="margin-bottom: 5px;">
 					</div>
 					<div data-role="button">
-						<button type="button" name="button" class="button_login btn_submit tabindex">로그인</button>
-						<button type="button" name="button" class="button_join tabindex"><a href="join.html">회원가입</a></button>
+						<button type="button" name="button" class="button_login btn_submit tabindex">회원가입</button>
 					</div>
+                    <div class="center">이미 계정이 있으세요? <a href="login.html" class="inline-block" style="color: #3e3b78;">로그인</a></div>
 				</div>
 				</form>
 				<div class="sns">
@@ -405,7 +407,7 @@
             <div class="info">
                 <strong><i class="ico_info"><span class="hidden">안내 사항</span></i> 안내 사항</strong>
                 <p class="square">
-                    로그인할 수 없는 경우 FAQ를 참조하시기 바랍니다.
+                    회원가입이 정상적으로 진행되지 않는 경우 FAQ를 참조하시기 바랍니다.
                 </p>
             </div>
 		</div>

@@ -526,7 +526,7 @@ section{margin-bottom:90px !important;}
 .hidden{
     background:none !important;
     border:none !important;
-    display:none;
+    display:none !important;
 }
 .event-banner2 .row{
     background:url('../images/event2bg.png')no-repeat center center;
@@ -569,6 +569,14 @@ section{margin-bottom:90px !important;}
 .bannerNormal{display:block;}
 .bannerMobile{display:none;}
 .search-filter{display:none;}
+.price{
+    font-size:1.2em;
+    font-weight:600;
+    color:#3e3b78;
+}
+.card-body h1{margin-bottom:10px;}
+aside button:hover{background:#24224e;}
+.info{padding-left:5px;}
 @media screen and (min-width:1025px){
     header{
         display: block;
@@ -959,11 +967,14 @@ section{margin-bottom:90px !important;}
         width: 95% !important;
         margin: 0 auto;
     }
+    .nav-tabs .nav-item{width:20%;}
+    .nav-tabs .nav-link{padding:0 !important; margin:0 !important;justify-content: center;}
 }
 @media screen and (max-width:430px){
     .bannerNormal{display:none !important;}
     .bannerMobile{display:block !important;}
 }
+.margin{height:20px;}
 #tabContents_5 .card2{margin-bottom:0px !important;}
 .search-filter-hidden{
     width: 90%;
@@ -994,6 +1005,39 @@ section{margin-bottom:90px !important;}
     height: 100%;
     object-fit: fill;
 }
+/*login&search*/
+.result-card a{width:100%;height:100%;}
+div.page_title_wrap h3.page_title.login {
+    text-align: center;
+}
+div.page_title_wrap h3.page_title {
+    padding: 40px 0;
+    font-size: 36px;
+    font-weight: bold;
+    word-break: keep-all;
+}
+.page_title.join{padding:40px 0 10px !important;}
+/*course-intro*/
+.lecture-arrow img{transition: transform 0.3s ease;}
+.first-arrow {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+}
+.lecture-arrow img.active {
+    transition: transform 0.3s ease;
+    transform: rotate(180deg);
+}
+.lecture-description-article p{margin-bottom:20px;}
+.lecture-arrow img{width:20px;}
+/*.course-first .lecture-sublist{display:none;}*/
+/*.course-first:hover>.lecture-sublist{display:flex;}*/
+.lecture-sublist.active{display:flex !important;}
+.padding-left{padding-left:10px;}
+.lecturer-name{
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #313338;
+}
 :root{
     --primary: #3e3b78;
     --border-color: rgb(225, 225, 232);
@@ -1003,6 +1047,8 @@ section{margin-bottom:90px !important;}
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}
 body footer p:first-child, body footer p:last-child{padding:20px;}
 body footer p:first-child{font-size:calc(1em + 1px);}
+
+.inline-block{display:inline-block;}
 
 /* 반응형 스타일
 ---------------------------------------------------------------- */
