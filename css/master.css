@@ -1038,6 +1038,29 @@ div.page_title_wrap h3.page_title {
     font-size: 1.25rem;
     color: #313338;
 }
+.followingMenuM{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0rem;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px -1px 0px 0px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.followingMenuM button {
+    width: 30%;
+    height: 40px;
+    background: #3e3b78;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.followingMenuM button:hover{background: #24224e;}
 :root{
     --primary: #3e3b78;
     --border-color: rgb(225, 225, 232);
