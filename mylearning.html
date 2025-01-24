@@ -99,7 +99,7 @@
             box-sizing: border-box;
             border-bottom: 0;
         }
-        .container .sidebar-list>li.on:first-child>.inside {
+        .container .sidebar-list>li.on:nth-child(2)>.inside {
             border-top: 1px solid #3e3b78;
             border-bottom: 1px solid #3e3b78;
         }
@@ -496,12 +496,12 @@
                 <div class="container-inner">
                     <div class="sidebar">
                         <ul class="sidebar-list js-drop menu_list">
-                            <li menu-id="35" class="on">
+                            <li menu-id="35">
                                 <a href="myclassroom.html" class="inside menu_depth2">
                                     나의 홈<span class="icon-chevron_forward depth" style="display: none;"></span>
                                 </a>
                             </li>
-                            <li menu-id="47">
+                            <li menu-id="47" class="on">
                                 <a href="mylearning.html" class="inside menu_depth2">
                                     나의 학습<span class="icon-chevron_forward depth" style="display: none;">…</span>
                                 </a>
