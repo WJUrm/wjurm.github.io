@@ -1063,12 +1063,20 @@ div.page_title_wrap h3.page_title {
     z-index: 100;
     box-shadow: rgba(0, 0, 0, 0.08) 0px -1px 0px 0px;
     display:flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
 }
+.followingMenu-inner{
+    width: 95%;
+    margin: 0 auto;
+}
+.followingMenuRow1{
+    display: flex;
+    justify-content: space-between;
+}
+.followingMenuRow2{padding-top:5px;}
 .followingMenuM button{
-    width: 30%;
-    height: 40px;
+    width: 48%;
+    height: 50px;
     background: #3e3b78;
     color: #fff;
     outline: none;
