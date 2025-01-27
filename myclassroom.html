@@ -91,27 +91,23 @@
         .container-inner .container-inner>.content {
             flex: 1 1 auto;
         }
-        .container .sidebar-list{
-            display: table;
-            border-collapse: collapse;
-            width: 100%;
+        .container .sidebar-list {
             overflow: hidden;
             border: 0;
         }
-        .container .sidebar-list li{display: table-row;}
         .container-inner .sidebar-list {
             box-sizing: border-box;
             border-bottom: 0;
         }
-        /*.container .sidebar-list>li.on:first-child>.inside {
+        .container .sidebar-list>li.on:first-child>.inside {
             border-top: 1px solid #3e3b78;
             border-bottom: 1px solid #3e3b78;
-        }*/
-        /*.container .sidebar-list>li.on {
+        }
+        .container .sidebar-list>li.on>.inside {
             border-color: #3e3b78;
             box-shadow: 0 0 5px 0 rgba(31, 90, 252, .16);
-        }*/
-        .container .sidebar-list>li:first-child{
+        }
+        .container .sidebar-list>li:first-child>.inside {
             border-top: 1px solid #e0e0e0;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
@@ -121,21 +117,22 @@
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
         }
-        .container-inner .sidebar-list>li.on {
+        .container-inner .sidebar-list>li.on>.inside {
             border-color: #3e3b78;
             color: #3e3b78;
             font: 16px / 1.4em "spoqa-medium";
         }
-        .container .sidebar-list>li{
+        .container .sidebar-list>li>.inside {
             height: auto;
             min-height: 60px;
             padding: 16.5px 24px;
             box-sizing: border-box;
             border: 1px solid #e0e0e0;
             border-top: 1px solid #fff;
-            display: table-caption;
+            display: flex;
+            align-items: center;
         }
-        .container .sidebar-list>li:hover{
+        .container .sidebar-list>li>.inside:hover{
             border: 1px solid #3e3b78;
         }
         .title-frame {
