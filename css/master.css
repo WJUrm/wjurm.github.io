@@ -1076,6 +1076,7 @@ div.page_title_wrap h3.page_title {
     border-radius: 5px;
 }
 .followingMenuM button:hover{background: #24224e;}
+.sidebar-list a:hover{color:#3e3b78;}
 :root{
     --primary: #3e3b78;
     --border-color: rgb(225, 225, 232);
