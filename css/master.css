@@ -577,6 +577,18 @@ section{margin-bottom:90px !important;}
 .card-body h1{margin-bottom:10px;}
 aside button:hover{background:#24224e;}
 .info{padding-left:5px;}
+.nav-tabs .nav-link {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    padding: .5625rem .25rem .4375rem .25rem;
+    margin-right: 1rem;
+    font-size: .875rem;
+    line-height: 1.375rem;
+    color: var(--text-alternative);
+    border-width: 0 0 .125rem;
+    border-radius: 0;
+}
 @media screen and (min-width:1025px){
     header{
         display: block;
@@ -973,6 +985,9 @@ aside button:hover{background:#24224e;}
 @media screen and (max-width:430px){
     .bannerNormal{display:none !important;}
     .bannerMobile{display:block !important;}
+    .nav-tabs .nav-link {
+        font-size: .75rem !important;
+    }
 }
 .margin{height:20px;}
 #tabContents_5 .card2{margin-bottom:0px !important;}
@@ -1051,7 +1066,7 @@ div.page_title_wrap h3.page_title {
     justify-content: space-around;
     align-items: center;
 }
-.followingMenuM button {
+.followingMenuM button{
     width: 30%;
     height: 40px;
     background: #3e3b78;
