@@ -91,23 +91,27 @@
         .container-inner .container-inner>.content {
             flex: 1 1 auto;
         }
-        .container .sidebar-list {
+        .container .sidebar-list{
+            display: table;
+            border-collapse: collapse;
+            width: 100%;
             overflow: hidden;
             border: 0;
         }
+        .container .sidebar-list li{display: table-row;}
         .container-inner .sidebar-list {
             box-sizing: border-box;
             border-bottom: 0;
         }
-        .container .sidebar-list>li.on:first-child>.inside {
+        /*.container .sidebar-list>li.on:first-child>.inside {
             border-top: 1px solid #3e3b78;
             border-bottom: 1px solid #3e3b78;
-        }
-        .container .sidebar-list>li.on>.inside {
+        }*/
+        /*.container .sidebar-list>li.on {
             border-color: #3e3b78;
             box-shadow: 0 0 5px 0 rgba(31, 90, 252, .16);
-        }
-        .container .sidebar-list>li:first-child>.inside {
+        }*/
+        .container .sidebar-list>li:first-child{
             border-top: 1px solid #e0e0e0;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
@@ -117,22 +121,21 @@
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
         }
-        .container-inner .sidebar-list>li.on>.inside {
+        .container-inner .sidebar-list>li.on {
             border-color: #3e3b78;
             color: #3e3b78;
             font: 16px / 1.4em "spoqa-medium";
         }
-        .container .sidebar-list>li>.inside {
+        .container .sidebar-list>li{
             height: auto;
             min-height: 60px;
             padding: 16.5px 24px;
             box-sizing: border-box;
             border: 1px solid #e0e0e0;
             border-top: 1px solid #fff;
-            display: flex;
-            align-items: center;
+            display: table-caption;
         }
-        .container .sidebar-list>li>.inside:hover{
+        .container .sidebar-list>li:hover{
             border: 1px solid #3e3b78;
         }
         .title-frame {
@@ -495,23 +498,23 @@
                 </div>
                 <div class="container-inner">
                     <div class="sidebar">
-                        <ul class="sidebar-list js-drop menu_list">
-                            <li menu-id="35" class="on">
+                        <ul class="sidebar-list menu_list">
+                            <li menu-id="01" class="on">
                                 <a href="myclassroom.html" class="inside menu_depth2">
                                     나의 홈<span class="icon-chevron_forward depth" style="display: none;"></span>
                                 </a>
                             </li>
-                            <li menu-id="47">
+                            <li menu-id="02">
                                 <a href="mylearning.html" class="inside menu_depth2">
                                     나의 학습<span class="icon-chevron_forward depth" style="display: none;">…</span>
                                 </a>
                             </li>
-                            <li menu-id="48">
+                            <li menu-id="03">
                                 <a href="javascript:;" class="inside menu_depth2">
                                     설문<span class="icon-chevron_forward depth" style="display: block;"></span>
                                 </a>
                             </li>
-                            <li menu-id="49">
+                            <li menu-id="04">
                                 <a href="javascript:;" class="inside menu_depth2">
                                     문의내역<span class="icon-chevron_forward depth" style="display: block;"></span>
                                 </a>
