@@ -78,13 +78,14 @@ button, .banner-inner{cursor:pointer;}
     width: 100%;
     background-size:30px;
     padding:10px;
-    font-size:18px;
+    font-size:14px;
     text-indent:20px;
     outline:none;
     background:#ececec;
     border:none;
     border-radius:50px;
     box-shadow:1px 1px 2px #ccc;
+    height: 40px;
 }
 .sub_menu_toggle_btn {
     display: inline-block;
