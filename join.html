@@ -181,6 +181,7 @@
             display: flex;
             justify-content: space-evenly;
         }
+        div[data-role=login]>div.center{padding-top:15px;}
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -211,7 +212,7 @@
             <div class="logo-and-gnb">
                 <ul class="gnb">
                     <li>
-                        <a href="#">강의</a>
+                        <a href="search.html">강의</a>
                         <ul class="lists">
                             <li><a href="search.html">HTMl</a></li>
                             <li><a href="search.html">CSS</a></li>
@@ -254,13 +255,13 @@
                     <input type="search" placeholder="무엇을 배우고 싶으세요?">
                     <button class="search-btn"></button>
                 </form>
-                <img src="images/profile.svg" class="profile-img">
+                <a href="login.html"><img src="images/profile.svg" class="profile-img"></a>
             </div>
             </div>
         <div class="gnb Tablet">
             <div class="header-gap">
                 <li>
-                    <a href="category.html">강의</a>
+                    <a href="search.html">강의</a>
                     <ul class="lists">
                         <li><a href="search.html">HTMl</a></li>
                         <li><a href="search.html">CSS</a></li>
@@ -345,11 +346,11 @@
 		<div class="container">
 			<h3 class="page_title join center">회원가입</h3>
             <h3 class="center">캐치코드에 오신 것을 환영합니다!</h4>
-            <div class="margin"></div>
+            
 		</div>
 	</div>
 
-	<div class="context">
+	<div class="context mobile-padding">
 		<div class="container">
 			<div class="box_login">
 				<form name="loginform" onsubmit="return false">
@@ -404,7 +405,7 @@
 				</div>
 
 			</div>
-            <div class="info">
+            <div class="info mobile-padding">
                 <strong><i class="ico_info"><span class="hidden">안내 사항</span></i> 안내 사항</strong>
                 <p class="square">
                     회원가입이 정상적으로 진행되지 않는 경우 FAQ를 참조하시기 바랍니다.

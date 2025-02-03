@@ -16,7 +16,7 @@
         }
         .search-page h2 {padding:10px 0;}
         .sidebar .flex{flex-direction: column;}
-        .search-option{margin-bottom:20px;}
+        .search-option{margin-bottom:10px;}
         .search-results{
             width:75%;
             box-sizing: border-box;
@@ -117,12 +117,12 @@
     <header id="header">
         <div class="container PC">
             <h1>
-                <a href="index.html"><img src="images/Logo2.svg"></a>
+                <a href="index.html"><img src="images/Logo2.svg" alt="캐치코드"></a>
             </h1>
             <div class="logo-and-gnb">
                 <ul class="gnb">
                     <li>
-                        <a href="#">강의</a>
+                        <a href="search.html">강의</a>
                         <ul class="lists">
                             <li><a href="search.html">HTMl</a></li>
                             <li><a href="search.html">CSS</a></li>
@@ -150,7 +150,7 @@
                 </form>
                 <ul class="service">
                     <li class="login"><a href="login.html"><img src="images/login.svg" alt="로그인"></a></li>
-                    <li class="register"><a href="#"><img src="images/join.svg" alt="회원가입"></a></li>
+                    <li class="register"><a href="join.html"><img src="images/join.svg" alt="회원가입"></a></li>
                     <li><a href="myclassroom.html"><img src="images/myclass.svg" alt="나의 강의실"></a></li>
                     <li><a href="#"><img src="images/service.svg" alt="고객센터"></a></li>
                 </ul>
@@ -165,13 +165,13 @@
                     <input type="search" placeholder="무엇을 배우고 싶으세요?">
                     <button class="search-btn"></button>
                 </form>
-                <img src="images/profile.svg" class="profile-img">
+                <a href="login.html"><img src="images/profile.svg" class="profile-img"></a>
             </div>
             </div>
-        <ul class="gnb Tablet">
+        <div class="gnb Tablet">
             <div class="header-gap">
                 <li>
-                    <a href="category.html">강의</a>
+                    <a href="search.html">강의</a>
                     <ul class="lists">
                         <li><a href="search.html">HTMl</a></li>
                         <li><a href="search.html">CSS</a></li>
@@ -195,8 +195,8 @@
                 <li><a href="myclassroom.html">나의 강의실</a></li>
                 <li><a href="#">고객센터</a></li>
             </div>
-        </ul>
-        <ul class="gnb mobile">
+        </div>
+        <div class="gnb mobile">
             <span class="btn_menu_mobile" title="메뉴">
                 
             </span>
@@ -210,12 +210,12 @@
             <button type="button" name="search" class="btn_search_mobile" title="검색">
                 <img src="images/search.svg">
             </button>
-        </ul>
+        </div>
         <nav class="nav mobile">
             <ul class="gnb_nav">
                 <div class="header-btn">
                     <a href="login.html" class="login-mobile">로그인</a>
-                    <a href="#" class="login-join">회원가입</a>
+                    <a href="join.html" class="login-join">회원가입</a>
                 </div>
                 <li>
                     <a href="#" class="bold open-courses">
@@ -290,7 +290,7 @@
                 </div>
                 <div class="search-results">
                     <div class="search-results-header-mobile">
-                        <h2>""에 대한 검색 결과<button class="search-filter"><img src="images/search-filter.svg"></button></h2>
+                        <h2>"코딩"에 대한 검색 결과<button class="search-filter"><img src="images/search-filter.svg"></button></h2>
                         <div class="search-filter-hidden">
                             <div class="search-option subject mobile">
                                 <button><h3>과목</h3><img src="images/down_btn.svg" alt="arrow" class="subject-arrow"></button>

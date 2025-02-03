@@ -581,9 +581,9 @@ aside button:hover{background:#24224e;}
     display: flex;
     align-items: center;
     height: 2.5rem;
-    padding: .5625rem .25rem .4375rem .25rem;
+    padding: 1.5625rem .25rem;
     margin-right: 1rem;
-    font-size: .875rem;
+    font-size: 1em;
     line-height: 1.375rem;
     color: var(--text-alternative);
     border-width: 0 0 .125rem;
@@ -599,6 +599,11 @@ aside button:hover{background:#24224e;}
     background: #fbfbfb;
 }
 .search-section{margin-bottom:0 !important;}
+.snb{border-bottom: 1px solid #f0f0f5;}
+.subMenuCon{
+    border-bottom: 1px solid #f0f0f5;
+
+}
 
 @media screen and (min-width:1025px){
     header{
@@ -997,13 +1002,40 @@ aside button:hover{background:#24224e;}
     .banner-inner{
         width:90%;
     }
+    div[data-role=login] {
+        padding: 50px 5% !important;
+        box-sizing: border-box;
+    }
+    .box_login div.sns{
+        padding: 30px 5% !important;
+    }
+    .list-activity>li {
+        padding: 20px !important;
+    }
 }
 @media screen and (max-width:430px){
     .bannerNormal{display:none !important;}
     .bannerMobile{display:block !important;}
-    .nav-tabs .nav-link {
+    /*.nav-tabs .nav-link {
         font-size: .75rem !important;
+    }*/
+    .snb {
+        position:relative;
+        white-space: nowrap;
+        
+        gap: 1vw;
+        width:max-content;
+        max-width:500px;
     }
+    .snb li{
+        float:left;
+        width:100px !important;
+    }
+    .container-lg.subMenuCon{
+        width:360px;
+        overflow:hidden;
+    }
+    #lecture-info .nav{display:block !important;}
 }
 .margin{height:20px;}
 #tabContents_5 .card2{margin-bottom:0px !important;}
@@ -1018,7 +1050,7 @@ aside button:hover{background:#24224e;}
     align-items: center;
     justify-content: space-between;
     width: 80%;
-    padding: 5px 10px;
+    padding: 8px 10px;
     border: .0625rem solid #e1e1e8;
     border-radius: 5px 5px 0 0;
     background: linear-gradient(0deg, #f3f5f8 0%, #fff 100%);
@@ -1101,10 +1133,13 @@ div.page_title_wrap h3.page_title {
 }
 .followingMenuM button:hover{background: #24224e;}
 .sidebar-list a:hover{color:#3e3b78;}
+.page_title_wrap .center:last-child{margin-bottom:20px;}
+
 :root{
     --primary: #3e3b78;
     --border-color: rgb(225, 225, 232);
     --background-normal: rgb(255, 255, 255);
+    --swiper-theme-color:#3e3b78 !important;
 }
 /*footer style*/
 body footer{border-top:1px solid #e2e2e2; padding-top:20px;}

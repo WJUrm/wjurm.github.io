@@ -46,21 +46,13 @@
             color: #fff;
             line-height: 30px;
         }
-        .small-title {
-            background-color: #fff;
-            border-bottom: 2px solid #f0f0f5;
-            height: 2.5rem;
-        }
-        .small-title-nav {
-            border-bottom: unset;
-        }
-        #lecture-info .nav {
+        /*#lecture-info .nav {
             display: flex;
             flex-wrap: wrap;
             padding-left: 0;
             margin-bottom: 0;
             list-style: none;
-        }
+        }*/
         #lecture-info.nav .nav-item {
             margin-right: .5rem;
         }
@@ -264,6 +256,13 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
+        #lecture-info .nav {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+        }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -294,7 +293,7 @@
             <div class="logo-and-gnb">
                 <ul class="gnb">
                     <li>
-                        <a href="#">강의</a>
+                        <a href="search.html">강의</a>
                         <ul class="lists">
                             <li><a href="search.html">HTMl</a></li>
                             <li><a href="search.html">CSS</a></li>
@@ -337,13 +336,13 @@
                     <input type="search" placeholder="무엇을 배우고 싶으세요?">
                     <button class="search-btn"></button>
                 </form>
-                <img src="images/profile.svg" class="profile-img">
+                <a href="login.html"><img src="images/profile.svg" class="profile-img"></a>
             </div>
             </div>
         <div class="gnb Tablet">
             <div class="header-gap">
                 <li>
-                    <a href="category.html">강의</a>
+                    <a href="search.html">강의</a>
                     <ul class="lists">
                         <li><a href="search.html">HTMl</a></li>
                         <li><a href="search.html">CSS</a></li>
@@ -420,16 +419,17 @@
 
     <!--header end-->
 <section id="lecture-info">
-    <div id="lectureTitleAreaCover" class="lectureTitleArea">
-        <div class="container-lg row">
-            <h1 class="lectureTitleH1" data-mkt-id="edu_lecture_h1_lectureName">모든 개발자를 위한 HTTP 웹 기본 지식</h1>
-            <p class="lecturesubtitle">실무에 꼭 필요한 HTTP 핵심 기능과 올바른 HTTP API 설계 방법을 학습합니다.</p>
-        </div> 
+    <div class="lectureTitleArea">
+        <div class="mobile-padding">
+            <div class="container-lg row">
+                <h1 class="lectureTitleH1" data-mkt-id="edu_lecture_h1_lectureName">모든 개발자를 위한 HTTP 웹 기본 지식</h1>
+                <p class="lecturesubtitle">실무에 꼭 필요한 HTTP 핵심 기능과 올바른 HTTP API 설계 방법을 학습합니다.</p>
+            </div> 
+        </div>
     </div>
-    <div id="fixedHeader" class="row">
-        <div class="small-title">
-            <div class="container-lg">
-                <ul class="small-title-nav nav nav-tabs">
+    <div id="subMenu" class="row">
+            <div class="container-lg subMenuCon">
+                <ul class="nav nav-tabs snb">
                     <li class="nav-item">
                         <a class="subtitle-1 nav-link">강좌 소개</a>
                     </li>
@@ -447,7 +447,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
     </div>
     <div>
         <div class="container-lg flex row">
@@ -786,7 +785,7 @@
                                     <h3><strong>강의자 소개</strong></h3>
                                 </div>
                                 <div class="card-body">
-                                    <div class="override-v4">
+                                    <div class="override-v4" style="padding-top: 10px;">
                                         <div class="d-flex align-items-center">
                                             <div>
                                                 <div style="display: inline-block; vertical-align: middle; width: 60px; height: 60px; border-radius: 100%; font-family: Helvetica, Arial, sans-serif;">
@@ -800,56 +799,44 @@
                                                     <span>홈페이지</span>
                                                 </a>
                                             </div>
-                                            
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <div class="d-flex justify-content-center">
+                                        <div class="d-flex">
+                                            <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
+                                                <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
+                                                <span style="display:none;">홈페이지</span>
+                                            </a>
+                                            <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
+                                                <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
+                                                <span style="display:none;">페이스북</span>
+                                            </a>
+                                            <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
+                                                <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
+                                                <span style="display:none;">페이스북 그룹</span>
+                                            </a>
+                                            <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
+                                                <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
+                                                <span style="display:none;">유튜브</span>
+                                            </a>
+                                        </div>
+                                        <div class="position-relative">
+                                            <div>
                                                 <div>
-                                                    <span role="status" class="d-flex align-items-center">
-                                                        <span role="text">
-                                                            <span></span>
-                                                        </span>
-                                                    </span>
+                                                    진짜 실무에 필요한 제대로 된 개발자가 될 수 있도록, 교육하는 것이 저의 목표입니다.
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-flex">
-                                        <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
-                                            <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
-                                            <span style="display:none;">홈페이지</span>
-                                        </a>
-                                        <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
-                                            <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
-                                            <span style="display:none;">페이스북</span>
-                                        </a>
-                                        <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
-                                            <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
-                                            <span style="display:none;">페이스북 그룹</span>
-                                        </a>
-                                        <a href="#" target="_blank" class="d-flex align-items-center" rel="noreferrer">
-                                            <svg fill="currentColor" width="16" height="16" class="mr-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">…</svg>
-                                            <span style="display:none;">유튜브</span>
-                                        </a>
-                                    </div>
-                                    <div class="position-relative">
-                                        <div>
-                                            <div>
-                                                진짜 실무에 필요한 제대로 된 개발자가 될 수 있도록, 교육하는 것이 저의 목표입니다.
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                     <div>
-                                        <hr style="margin:1.875rem 0">
-                                        <div class="container-lg">
-                                            <div class="container-lg">
-                                                <div>
-                                                    <h1>
-                                                        <span>
-                                                            강사의 더 많은 강좌
-                                                            <span class="text-primary" style="font-size: 1rem;">(4)</span>
-                                                        </span>
-                                                    </h1>
+                                        <hr style="margin:calc(30px + 1.875rem) 0 1.875rem">
+                                        <div class="container-lg" style="padding: 30px 0 60px;">
+                                            <div>
+                                                <h1>
+                                                    <span>
+                                                        강사의 더 많은 강좌
+                                                        <span class="text-primary" style="font-size: 1rem;">(4)</span>
+                                                    </span>
+                                                </h1>
                                                     <div class="recommended-courses">
                                                         <div class="recommended-course no-mobile">
                                                             <div class="col-3">
@@ -889,18 +876,18 @@
                                                                 <div class="swiper-slide">
                                                                     <img src="images/anothercourse03.png">
                                                                     <strong class="course-name">황금사과의 자바 입문 - 코드로 시작하는 자바 첫걸음</strong>
-                                                                    <span>강의자</span>
+                                                                    <span>황금사과</span>
                                                                 </div>
                                                                 <div class="swiper-slide">
                                                                     <img src="images/anothercourse04.png">
                                                                     <strong class="course-name">황금사과의 실전 자바 - 기본편</strong>
                                                                     <span>황금사과</span>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>  
-                                                </div>
-                                            </div>
+                                                            </div>  
+                                                    </div>
+                                                </div>  
+                                        </div>
+                                            
                                             <div>
                                                 <div class="override-v4">
                                                     <div>
@@ -1180,6 +1167,57 @@
         el: ".swiper-pagination",
         clickable: true,
         },
+        });
+
+        //상단 슬라이드 메뉴 제어
+        let temp = 0;
+        let startX = 0;
+        let endX = 0;
+        let isDragging = false;
+
+        $(document).ready(function () {
+            let $snb = $('#subMenu .nav.nav-tabs.snb');
+
+            // 초기 left 값을 명시적으로 설정
+            temp = parseInt($snb.css('left')) || 0;
+            $snb.css('left', temp + 'px');
+
+            $('#subMenu').on('touchstart', function (event) {
+                event.preventDefault();
+                startX = event.originalEvent.touches[0].screenX;
+                isDragging = true;
+                console.log('Touch Start - startX:', startX, 'temp:', temp);
+            });
+
+            $('#subMenu').on('touchmove', function (event) {
+                if (!isDragging) return;
+                event.preventDefault();
+
+                endX = event.originalEvent.touches[0].screenX;
+                let distance = (startX - endX) / 2; // 이동 속도 조정
+
+                let minLeft = $('#subMenu').width() - $snb.width();
+                
+                temp = parseInt($snb.css('left')) || 0;
+                temp -= distance;
+
+                // temp 범위 제한
+                if (temp > 0) {
+                    temp = 0;
+                } else if (temp < minLeft) {
+                    temp = minLeft*1;
+                }
+
+                $snb.css('left', temp + 'px');
+                console.log('Touch Move - endX:', endX, 'distance:', distance, 'temp:', temp);
+
+                startX = endX;
+            });
+
+            $('#subMenu').on('touchend', function (event) {
+                isDragging = false;
+                console.log('Touch End - Final temp:', temp);
+            });
         });
       </script>
 

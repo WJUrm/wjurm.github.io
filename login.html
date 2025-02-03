@@ -65,16 +65,16 @@
             height: 0px;
             overflow: hidden;
         }
-        div[data-role=login] > div.check_search > div.search > a.email {
+        div[data-role=login] > div.search > a.email {
             margin: 0 15px;
         }
-        div[data-role=login] > div.check_search > div.search > a {
+        div[data-role=login] > div.search > a {
             position: relative;
             color: #808080;
         }
-        div[data-role=login] > div.check_search > div.search {
+        div[data-role=login] > div.search {
             float: right;
-            padding: 5px 0;
+            padding: 10px 0;
             box-sizing: border-box;
         }
         div[data-role=login] > div[data-role=button] {
@@ -94,7 +94,7 @@
             line-height: 60px;
             border:none;
         }
-        div[data-role="button"] button.btn_submit {
+        div[data-role="button"] button.btn_submit a{
             color: #fff;
             background: #3e3b78;
         }
@@ -116,7 +116,7 @@
         main.login div.context div.check_search > label {
             visibility: hidden;
         }
-        div[data-role=login] > div.check_search > div.search > a.email:after {
+        div[data-role=login] > div.search > a.email:after {
             content: '';
             display: inline-block;
             position: absolute;
@@ -125,7 +125,7 @@
             width: 1px;
             height: 15px;
         }
-        div[data-role=login] > div.check_search > div.search > a {
+        div[data-role=login] >  div.search > a {
             position: relative;
             color: #808080;
         }
@@ -211,7 +211,7 @@
             <div class="logo-and-gnb">
                 <ul class="gnb">
                     <li>
-                        <a href="#">강의</a>
+                        <a href="search.html">강의</a>
                         <ul class="lists">
                             <li><a href="search.html">HTMl</a></li>
                             <li><a href="search.html">CSS</a></li>
@@ -254,13 +254,13 @@
                     <input type="search" placeholder="무엇을 배우고 싶으세요?">
                     <button class="search-btn"></button>
                 </form>
-                <img src="images/profile.svg" class="profile-img">
+                <a href="login.html"><img src="images/profile.svg" class="profile-img"></a>
             </div>
             </div>
         <div class="gnb Tablet">
             <div class="header-gap">
                 <li>
-                    <a href="category.html">강의</a>
+                    <a href="search.html">강의</a>
                     <ul class="lists">
                         <li><a href="search.html">HTMl</a></li>
                         <li><a href="search.html">CSS</a></li>
@@ -347,7 +347,7 @@
 		</div>
 	</div>
 
-	<div class="context">
+	<div class="context mobile-padding">
 		<div class="container">
 			<div class="box_login">
 				<form name="loginform" onsubmit="return false">
@@ -361,17 +361,13 @@
 						<label for="password">비밀번호 입력</label>
 						<input type="password" id="password" class="tabindex" name="password" title='비밀번호를 입력하세요.' placeholder='비밀번호를 입력하세요.' autocomplete="off">
 					</div>
-					<div class="check_search">
-						<label for="inphold">로그인 상태 유지</label>
-						<input type="checkbox" id="inphold" class="hidden" title="로그인 상태 유지" tabindex="-1">
-						<button type="button" name="checkbox"><i class="xi-check xi"></i></button>
-						<div class="search">
-							<a href="javascript:goView('/find/email');" class="email tabindex">이메일 찾기</a>
-							<a href="javascript:goView('/find/pwd');" class="password tabindex">비밀번호 찾기</a>
-						</div>
-					</div>
+					
+                    <div class="search">
+                        <a href="javascript:goView('/find/email');" class="email tabindex">이메일 찾기</a>
+                        <a href="javascript:goView('/find/pwd');" class="password tabindex">비밀번호 찾기</a>
+                    </div>
 					<div data-role="button">
-						<button type="button" name="button" class="button_login btn_submit tabindex">로그인</button>
+						<button type="button" name="button" class="button_login btn_submit tabindex"><a href="myclassroom.html">로그인</a></button>
 						<button type="button" name="button" class="button_join tabindex"><a href="join.html">회원가입</a></button>
 					</div>
 				</div>
