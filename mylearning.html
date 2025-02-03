@@ -107,13 +107,7 @@
             border-color: #3e3b78;
             box-shadow: 0 0 5px 0 rgba(31, 90, 252, .16);
         }
-        .container .sidebar-list>li:first-child>.inside {
-            border-top: 1px solid #e0e0e0;
-            border-top-left-radius: 6px;
-            border-top-right-radius: 6px;
-        }
         .container .sidebar-list>li:last-child>.inside {
-            border-top: 1px solid #e0e0e0;
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
         }
@@ -122,21 +116,6 @@
             color: #3e3b78;
             font: 16px / 1.4em "spoqa-medium";
         }
-        .container .sidebar-list>li>.inside {
-            height: auto;
-            min-height: 60px;
-            padding: 16.5px 24px;
-            box-sizing: border-box;
-            border: 1px solid #e0e0e0;
-            border-top: 1px solid #fff;
-            display: flex;
-            align-items: center;
-        }
-        .container .sidebar-list>li>.inside:hover{
-            border: 1px solid #3e3b78;
-        }
-        .container .sidebar-list>li:nth-child(1)>.inside:hover{border-bottom:1px solid #e0e0e0 !important;}
-        .container .sidebar-list>li:nth-child(3)>.inside:hover{border-top:1px solid #e0e0e0 !important;}
         .title-frame {
             display:flex;
             justify-content: space-between;
@@ -496,6 +475,7 @@
                     </div>
                 </div>
                 <div class="container-inner">
+                    <a href="#;" class="drop-menu__btn mobile" style="cursor: pointer;">나의 홈<img src="images/down_btn.svg" alt="arrow" class="arrow-icon"></a>
                     <div class="sidebar">
                         <ul class="sidebar-list menu_list">
                             <li menu-id="01">
@@ -601,5 +581,17 @@
         <p>©CATCHCODEKR. ALL RIGHTS RESERVED</p>
     </footer>
     <script src="main.js"></script> 
+    <script>
+        const dropmenubtn = document.querySelector('.drop-menu__btn');
+        const dropmenu = document.querySelectorAll('.sidebar-list.menu_list');
+        const courseArrow = document.querySelector('.arrow-icon');
+
+        dropmenubtn.addEventListener('click', () => {
+            dropmenu.forEach(dropmenu => {
+                dropmenu.classList.toggle('active');
+                courseArrow.classList.toggle('active');
+            });
+        });
+      </script>
 </body>
 </html>
