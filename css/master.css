@@ -461,6 +461,7 @@ section{margin-bottom:90px !important;}
     border-radius:10px;
     cursor:pointer;
 }
+.flex.morebox .additional-box{padding:10px 24px !important;}
 .additional-box:hover{background:#24224e;}
 .additional-box p{text-align: center;}
 .question-question{
@@ -1132,7 +1133,7 @@ aside button:hover{background:#24224e;}
         width:100px !important;
     }
     .container-lg.subMenuCon{
-        width:360px;
+        /*width:360px;*/
         overflow:hidden;
     }
     #lecture-info .nav{display:block !important;}
