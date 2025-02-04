@@ -627,7 +627,6 @@ aside button:hover{background:#24224e;}
     color: #3e3b78;
     font: 16px / 1.4em "spoqa-medium";
 }
-/*.container .sidebar-list>li:nth-child(2)>.inside:hover{border-top:1px solid #e0e0e0 !important;}*/
 
 .container .sidebar-list>li>.inside:hover{
     border-color:#3e3b78;
@@ -669,10 +668,9 @@ aside button:hover{background:#24224e;}
             font: 16px / 1.4em "spoqa-medium";
             padding: 0 24px !important;
         }
-        /*
-        .container .sidebar-list>li:nth-child(1)>.inside:hover
-                .container .sidebar-list>li:nth-child(3)>.inside:hover{border-top:1px solid #e0e0e0 !important;}
-        */
+        
+        
+        
 
 @media screen and (min-width:1025px){
     header{
@@ -742,6 +740,7 @@ aside button:hover{background:#24224e;}
     }
     header .container.PC .service img{height:30px !important;}
     .for-business-logos img{min-width:145px;}
+    
 }
 @media screen and (min-width:768px) and (max-width:1024px){
     .Tablet{display:block !important;}
