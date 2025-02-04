@@ -294,12 +294,12 @@ section{margin-bottom:90px !important;}
     outline:none;
     border:none;
     box-shadow:1px 1px 3px #150f2c;
-    background:#5936fe;
+    background:#3e3b78;
     color:white;
     font-size:0.9em;
 }
 .course-info a:hover{
-    background:#3e3b78;
+    background:#24224e;
 }
 .course-image a{height:100%;display: flex;}
 .course-image a img{width:100%;height: 100%;}
@@ -513,7 +513,7 @@ section{margin-bottom:90px !important;}
 .btn-style{
     width:80%;
     height:50px;
-    background-color:#5936fe;
+    background-color:#3e3b78;
     color:white;
     border:none;
     border-radius:5px;
@@ -521,7 +521,7 @@ section{margin-bottom:90px !important;}
     cursor:pointer;
 }
 .btn-style:hover{
-    background-color:#3e3b78;
+    background-color:#24224e;
 }
 .col-2{overflow:hidden;}
 .col-3{cursor:pointer;}
